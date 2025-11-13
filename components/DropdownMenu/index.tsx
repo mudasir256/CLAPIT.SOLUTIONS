@@ -1,0 +1,152 @@
+"use client";
+
+import Link from "next/link";
+import { motion, Variants } from "framer-motion";
+import { CSSProperties } from "react";
+
+const scrollbarHideStyles: CSSProperties = {
+  msOverflowStyle: "none" as const,
+  scrollbarWidth: "none" as const,
+  WebkitOverflowScrolling: "touch",
+};
+
+export interface Service {
+  title: string;
+  href: string;
+  description?: string;
+  category: string;
+}
+interface Category {
+  id: string;
+  label: string;
+}
+interface DropdownMenuProps {
+  onClose: () => void;
+  developmentServices?: Service[];
+  marketingServices?: Service[];
+  developmentIndustries?: any[];
+  marketingIndustries?: any[];
+  seeAll: string;
+  title: string;
+}
+
+export default function DropdownMenu({
+  onClose,
+  developmentServices = [],
+  marketingServices = [],
+  developmentIndustries = [],
+  marketingIndustries = [],
+  seeAll,
+  title,
+}: DropdownMenuProps) {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+    exit: { opacity: 0 },
+  };
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring" as const,
+        stiffness: 300,
+        damping: 24,
+      },
+    },
+    exit: {
+      opacity: 0,
+      y: 20,
+      transition: {
+        duration: 0.2,
+      },
+    },
+  };
+
+  const devItems = developmentServices.length > 0 ? developmentServices : developmentIndustries;
+  const marketingItems = marketingServices.length > 0 ? marketingServices : marketingIndustries;
+
+  const ServiceCard = ({ item }: { item: any }) => (
+    <motion.div key={item.title || item.id} variants={itemVariants}>
+      <Link
+        href={item.href}
+        onClick={onClose}
+        className="block lg:p-4 p-2 rounded-lg bg-light lg:h-[16vh] h-[20vh] overflow-hidden"
+      >
+        <h3 className="lg:font-medium font-bold lg:text-[16px] text-[12px] text-dark mb-1">
+          {item.title}
+        </h3>
+        {item.description && (
+          <p className="sm:text-sm text-xs text-dark ">
+            {item.description}
+          </p>
+        )}
+      </Link>
+    </motion.div>
+  );
+
+  return (
+    <div>
+      <motion.div
+        className="w-full bg-white dark:bg-dark rounded-xl shadow-lg overflow-hidden max-h-[90vh] md:max-h-none flex flex-col"
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        variants={containerVariants}
+      >
+        <style>
+          {`
+          ::-webkit-scrollbar {
+            display: none;
+          }
+        `}
+        </style>
+
+        <div className="overflow-y-auto flex-1 " style={scrollbarHideStyles}>
+          <div className="p-6 space-y-8">
+            {devItems.length > 0 && (
+              <div>
+                <h2 className="text-2xl font-bold text-light mb-4 ">Development</h2>
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {devItems.slice(0, 6).map((item) => (
+                    <ServiceCard key={item.title || item.id} item={item} />
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {marketingItems.length > 0 && (
+              <div>
+                <h2 className="text-2xl font-bold text-light mb-4 ">Marketing</h2>
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {marketingItems.slice(0, 6).map((item) => (
+                    <ServiceCard key={item.title || item.id} item={item} />
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+
+        <div className="border-t border-gray-200 dark:border-gray-400 z-[999] p-4">
+          <Link
+            href={seeAll}
+            onClick={() => {
+              onClose();
+            }}
+            className="w-full text-left px-4 py-2 cursor-pointer text-sm text-gray-500 light:text-secondary dark:text-primary dark:light:text-secondary transition-colors"
+          >
+            View all {title} →
+          </Link>
+        </div>
+      </motion.div>
+    </div>
+  );
+}
