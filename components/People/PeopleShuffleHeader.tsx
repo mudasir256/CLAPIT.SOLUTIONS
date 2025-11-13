@@ -76,7 +76,7 @@ export default function PeoplePageHeader() {
       >
         <div className="absolute inset-0 flex items-center justify-center text-center z-0">
           <h1 className="text-5xl md:text-[130px] font-bold">
-            Life At <span className="text-secondary">CLAPIT SOLUTIONS</span>Solutions 
+            Life At <span className="text-secondary">CLAPIT</span>SOLUTIONS
           </h1>
         </div>
 
