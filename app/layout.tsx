@@ -5,7 +5,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
 import Loader from "@/components/Loading";
-import TawkToChat from "@/components/TawkToChat";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { futura, mont } from "./font";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || 'https://www.clapit.solutions';
@@ -176,6 +176,7 @@ export default function RootLayout({
           <Header />
 
           <main className="min-h-screen">{children}</main>
+          <SpeedInsights />
           <Footer />
         </SmoothScroll>
         {/* <TawkToChat /> */}
