@@ -1,4 +1,6 @@
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
+import { generateServiceMetadata } from "@/utilities/metadata";
 import ServicePageClient from "@/components/Services/ServicePageClient";
 import { services } from "@/data/services";
 import ContactUs from "@/components/ContactUs";
@@ -11,9 +13,24 @@ import WhatOurClientSay from "@/components/WhatOurClientSay";
 import FAQSection from "@/components/Faqs";
 import { caseStudies } from "@/data/case-studies";
 import DevelopmentServices from "@/components/DevelopmentServices";
+import ServiceSchema from "@/components/StructuredData/ServiceSchema";
+import BreadcrumbSchema from "@/components/StructuredData/BreadcrumbSchema";
 
 interface Params {
   slug: string;
+}
+
+export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
+  const { slug } = await params;
+  const service = services.find((s) => s.id === slug);
+
+  if (!service) {
+    return {
+      title: "Service Not Found",
+    };
+  }
+
+  return generateServiceMetadata(service);
 }
 
 export default async function ServicePage({
@@ -52,8 +69,43 @@ export default async function ServicePage({
     notFound();
   }
 
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || 'https://www.clapit.solutions';
+  const serviceUrl = `${baseUrl}/services/${slug}`;
+  
+  // Get image URL
+  let imageUrl = `${baseUrl}/images/og-image.jpg`;
+  if (service.seoImage) {
+    if (typeof service.seoImage === 'string') {
+      imageUrl = service.seoImage;
+    } else if (service.seoImage && typeof service.seoImage === 'object') {
+      const imgObj = service.seoImage as any;
+      if ('src' in imgObj) {
+        imageUrl = imgObj.src;
+      }
+    }
+  }
+
+  const breadcrumbs = [
+    { name: "Home", url: "/" },
+    { name: "Services", url: "/services" },
+    { name: service.title || "Service", url: `/services/${slug}` },
+  ];
+
   return (
     <section>
+      <ServiceSchema
+        name={service.title || "Service"}
+        description={service.seoDescription || service.description || ""}
+        url={serviceUrl}
+        image={imageUrl}
+        provider={{
+          name: "CLAPIT SOLUTIONS",
+          url: baseUrl,
+        }}
+        serviceType={service.title}
+        areaServed="Worldwide"
+      />
+      <BreadcrumbSchema items={breadcrumbs} />
       <ServicePageClient service={service} />
       
       {industryCaseStudies.length > 0 && (

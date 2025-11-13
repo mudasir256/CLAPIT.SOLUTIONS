@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import AnimatedSection1 from "./AnimatedSection1";
+import FAQSchema from "./StructuredData/FAQSchema";
 
 interface FAQItem {
   title: string;
@@ -21,8 +22,15 @@ const FAQSection: React.FC<FAQSectionProps> = ({ title, subtitle, faqs }) => {
   const toggleFaq = (index: number) => {
     setOpenFaq((prev) => (prev === index ? null : index));
   };
+  // Convert FAQ items to schema format
+  const faqSchemaItems = faqs.map((faq) => ({
+    question: faq.title,
+    answer: faq.answer,
+  }));
+
   return (
     <div className="bg-gradient-to-b from-gray-50/50 to-white/30 backdrop-blur-lg">
+      <FAQSchema faqs={faqSchemaItems} />
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-7xl mx-auto">
           <AnimatedSection1>

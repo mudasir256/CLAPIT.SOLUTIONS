@@ -1,12 +1,29 @@
 import { blogPosts } from "@/data/blogsData";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
+import { generateBlogMetadata } from "@/utilities/metadata";
 import BlogsDetailsHeader from "@/components/Blog/BlogsDetailsHeader";
 import BlogTableOfContent from "@/components/Blog/BlogTableOfContent";
 import BlogSections from "@/components/Blog/BlogSections";
 import ContactUsForm from "@/components/ContactUs/ContactUsForm";
+import ArticleSchema from "@/components/StructuredData/ArticleSchema";
+import BreadcrumbSchema from "@/components/StructuredData/BreadcrumbSchema";
 
 interface Params {
   slug: string;
+}
+
+export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
+  const { slug } = await params;
+  const blog = blogPosts.find((blog) => blog.slug === slug);
+
+  if (!blog) {
+    return {
+      title: "Blog Post Not Found",
+    };
+  }
+
+  return generateBlogMetadata(blog);
 }
 
 export default async function BlogPage({
@@ -21,8 +38,42 @@ export default async function BlogPage({
     notFound();
   }
 
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || 'https://www.clapit.solutions';
+  const blogUrl = `${baseUrl}/blogs/${slug}`;
+  
+  // Get image URL
+  let imageUrl = `${baseUrl}/images/og-image.jpg`;
+  if (blog.coverImage) {
+    if (typeof blog.coverImage === 'string') {
+      imageUrl = blog.coverImage;
+    } else if (blog.coverImage && typeof blog.coverImage === 'object' && 'src' in blog.coverImage) {
+      imageUrl = blog.coverImage.src;
+    }
+  }
+
+  const breadcrumbs = [
+    { name: "Home", url: "/" },
+    { name: "Blog", url: "/blogs" },
+    { name: blog.title || "Blog Post", url: `/blogs/${slug}` },
+  ];
+
   return (
     <div className="container mx-auto px-12 py-8">
+      <ArticleSchema
+        title={blog.title || "Blog Post"}
+        description={blog.description || ""}
+        url={blogUrl}
+        image={imageUrl}
+        publishedTime={new Date().toISOString()}
+        author={{
+          name: "CLAPIT SOLUTIONS",
+        }}
+        publisher={{
+          name: "CLAPIT SOLUTIONS",
+          logo: `${baseUrl}/images/logo.png`,
+        }}
+      />
+      <BreadcrumbSchema items={breadcrumbs} />
       <BlogsDetailsHeader blogPost={blog} />
 
       <div className="flex flex-col lg:flex-row gap-8 pt-20">

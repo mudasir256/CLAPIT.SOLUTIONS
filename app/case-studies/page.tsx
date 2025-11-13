@@ -1,16 +1,24 @@
 import { Metadata } from "next";
+import { generateStaticPageMetadata } from "@/utilities/metadata";
 import Industries from "@/components/CaseStudies/Industries";
 import FAQSection from "@/components/Faqs";
 import { faq } from "@/data/faq";
 import WhatOurClientSay from "@/components/WhatOurClientSay";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generateStaticPageMetadata({
   title: "Case Studies - CLAPIT SOLUTIONS",
   description:
-    "Explore our successful projects and see how we've helped businesses achieve their digital transformation goals.",
-  keywords:
-    "case studies, success stories, client projects, digital transformation",
-};
+    "Explore our successful projects and see how we've helped businesses achieve their digital transformation goals. Discover real-world solutions and client success stories.",
+  keywords: [
+    "case studies",
+    "success stories",
+    "client projects",
+    "digital transformation",
+    "portfolio",
+    "CLAPIT SOLUTIONS"
+  ],
+  path: "/case-studies",
+});
 
 export default function CaseStudiesPage() {
   return (

@@ -10,11 +10,28 @@ import React from "react";
 import TalkToExpert from "@/components/TalkToExpert";
 import { caseStudies } from "@/data/case-studies";
 import DevelopmentServices from "@/components/DevelopmentServices";
-import Head from "next/head";
+import { Metadata } from "next";
+import { generateIndustryMetadata } from "@/utilities/metadata";
+import ServiceSchema from "@/components/StructuredData/ServiceSchema";
+import BreadcrumbSchema from "@/components/StructuredData/BreadcrumbSchema";
 
 interface Params {
   slug: string;
 }
+
+export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
+  const { slug } = await params;
+  const industry = industriesData.find((industry) => industry.id === slug);
+
+  if (!industry) {
+    return {
+      title: "Industry Not Found",
+    };
+  }
+
+  return generateIndustryMetadata({ ...industry, category: "marketing" });
+}
+
 export default async function IndustriesDetailPage({
   params,
 }: {
@@ -50,19 +67,41 @@ export default async function IndustriesDetailPage({
     return <div>Industry not found</div>;
   }
 
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || 'https://www.clapit.solutions';
+  const industryUrl = `${baseUrl}/industries/marketing/${slug}`;
+  
+  // Get image URL
+  let imageUrl = `${baseUrl}/images/og-image.jpg`;
+  if (industry.seoImage) {
+    if (typeof industry.seoImage === 'string') {
+      imageUrl = industry.seoImage;
+    } else if (industry.seoImage && typeof industry.seoImage === 'object' && 'src' in industry.seoImage) {
+      imageUrl = industry.seoImage.src;
+    }
+  }
+
+  const breadcrumbs = [
+    { name: "Home", url: "/" },
+    { name: "Industries", url: "/industries" },
+    { name: "Marketing", url: "/industries/marketing" },
+    { name: industry.title || "Industry", url: `/industries/marketing/${slug}` },
+  ];
+
   return (
-    <>
-    <Head>
-      <title>{industry.seoTitle}</title>
-      <meta name="description" content={industry.seoDescription} />
-      <meta name="keywords" content={industry.seoKeywords} />
-      <meta property="og:title" content={industry.seoTitle} />
-      <meta property="og:description" content={industry.seoDescription} />
-      {industry.seoImage && (
-        <meta property="og:image" content={typeof industry.seoImage === "string" ? industry.seoImage : undefined} />
-      )}
-    </Head>
     <div>
+      <ServiceSchema
+        name={industry.title || "Industry"}
+        description={industry.seoDescription || industry.description || ""}
+        url={industryUrl}
+        image={imageUrl}
+        provider={{
+          name: "CLAPIT SOLUTIONS",
+          url: baseUrl,
+        }}
+        serviceType={`${industry.title} Marketing`}
+        areaServed="Worldwide"
+      />
+      <BreadcrumbSchema items={breadcrumbs} />
       <ServicePageClient service={industry} />
       <OfferServices
         service={{ ...industry, caseStudies: industryCaseStudies }}
@@ -82,6 +121,5 @@ export default async function IndustriesDetailPage({
       )}
       <ContactUs />
     </div>
-    </>
   );
 }

@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import { generateMetadata as generatePageMetadata } from "@/utilities/metadata";
 import ServicesSection from "@/components/Services/ServicesSwitchSection";
 import CaseStudyScroll from "@/components/CaseStudies/CaseStudyScroll";
 import Stats from "@/components/Stats";
@@ -15,13 +15,29 @@ import WhatOurClientSay from "@/components/WhatOurClientSay";
 import OurPartners from "@/components/OurPartners";
 // import Testimonials from "@/components/Testimonials";
 
-export const metadata: Metadata = {
-  title: "CLAPIT SOLUTIONS - Development and Branding Agency",
+export const metadata = generatePageMetadata({
+  title: "CLAPIT SOLUTIONS - AI-Powered Development and Branding Agency",
   description:
-    "CLAPIT SOLUTIONS is a full-service development and branding agency that combines cutting-edge software development with strategic brand building to deliver exceptional results.",
-  keywords:
-    "development, branding, agency, software development, brand building, CLAPIT SOLUTIONS",
-};
+    "CLAPIT SOLUTIONS is a leading AI-powered development and branding agency. We specialize in custom software development, web applications, mobile apps, AI integration, and strategic branding. Transform your business with cutting-edge technology and innovative solutions.",
+  keywords: [
+    "AI development company",
+    "software development agency",
+    "web development services",
+    "mobile app development",
+    "branding agency",
+    "digital marketing",
+    "custom software solutions",
+    "Next.js development",
+    "React development",
+    "AI integration",
+    "full-stack development",
+    "ecommerce development",
+    "SaaS development",
+    "UI/UX design",
+    "CLAPIT SOLUTIONS"
+  ],
+  url: process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || 'https://www.clapit.solutions',
+});
 
 export default function Home() {
   return (
