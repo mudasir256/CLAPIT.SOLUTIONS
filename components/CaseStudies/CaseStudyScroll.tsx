@@ -220,7 +220,7 @@ export default function CaseStudyScroll() {
                 <div className="w-full lg:hidden pt-2 space-y-2 border-t border-gray-200 relative z-10">
                   <h4 className="text-xs sm:text-sm font-bold text-gray-900 text-center">Key Objectives</h4>
                   <ul className="space-y-1.5">
-                    {study.objectives.slice(0, 2).map((objective, objIndex) => (
+                    {study.objectives.slice(0, 1).map((objective, objIndex) => (
                       <li key={objIndex} className="flex items-start gap-2 text-[10px] xs:text-xs text-gray-600">
                         <span className="text-secondary mt-0.5">•</span>
                         <span className="flex-1">{truncateWords(objective, windowWidth < 640 ? 15 : 20)}</span>
