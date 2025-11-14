@@ -13,7 +13,6 @@ import Blogs from "@/components/Blog";
 import { categories, services } from "@/data/services";
 import WhatOurClientSay from "@/components/WhatOurClientSay";
 import OurPartners from "@/components/OurPartners";
-// import Testimonials from "@/components/Testimonials";
 
 export const metadata = generatePageMetadata({
   title: "CLAPIT SOLUTIONS - AI-Powered Development and Branding Agency",
@@ -49,13 +48,12 @@ export default function Home() {
       <Stats />
       <CaseStudyScroll />
       <WhatOurClientSay />
-      {/* <Testimonials /> */}
       <GetStarted data={steps} bgColor={"#fff"} button={true} />
       <div className="px-4 md:px-8">
         <ContactUs />
       </div>
       <FAQSection title={faq.title} subtitle={faq.subtitle} faqs={faq.faqs} />
-      {/* <Blogs limit={3} /> */}
+      <Blogs limit={3} />
     </div>
   );
 }

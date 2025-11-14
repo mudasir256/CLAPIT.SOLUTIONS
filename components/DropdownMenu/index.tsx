@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
-import { CSSProperties } from "react";
+import { CSSProperties, useState } from "react";
 
 const scrollbarHideStyles: CSSProperties = {
   msOverflowStyle: "none" as const,
@@ -39,6 +39,8 @@ export default function DropdownMenu({
   seeAll,
   title,
 }: DropdownMenuProps) {
+  const [activeTab, setActiveTab] = useState<"development" | "marketing">("development");
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -72,6 +74,9 @@ export default function DropdownMenu({
 
   const devItems = developmentServices.length > 0 ? developmentServices : developmentIndustries;
   const marketingItems = marketingServices.length > 0 ? marketingServices : marketingIndustries;
+  
+  const hasDevelopment = devItems.length > 0;
+  const hasMarketing = marketingItems.length > 0;
 
   const ServiceCard = ({ item }: { item: any }) => (
     <motion.div key={item.title || item.id} variants={itemVariants}>
@@ -109,11 +114,42 @@ export default function DropdownMenu({
         `}
         </style>
 
+        {/* Tabs */}
+        {(hasDevelopment && hasMarketing) && (
+          <div className="border-b border-gray-200 dark:border-gray-700 px-6 pt-4">
+            <div className="flex space-x-1">
+              <button
+                onClick={() => setActiveTab("development")}
+                className={`px-4 py-2 text-sm font-medium transition-colors ${
+                  activeTab === "development"
+                    ? "text-secondary border-b-2 border-secondary"
+                    : "text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
+                }`}
+              >
+                Development
+              </button>
+              <button
+                onClick={() => setActiveTab("marketing")}
+                className={`px-4 py-2 text-sm font-medium transition-colors ${
+                  activeTab === "marketing"
+                    ? "text-secondary border-b-2 border-secondary"
+                    : "text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
+                }`}
+              >
+                Marketing
+              </button>
+            </div>
+          </div>
+        )}
+
         <div className="overflow-y-auto flex-1 " style={scrollbarHideStyles}>
-          <div className="p-6 space-y-8">
-            {devItems.length > 0 && (
+          <div className="p-6">
+            {/* Development Tab Content */}
+            {((activeTab === "development" && hasDevelopment) || (!hasMarketing && hasDevelopment)) && (
               <div>
-                <h2 className="text-2xl font-bold text-light mb-4 ">Development</h2>
+                {(!hasDevelopment || !hasMarketing) && (
+                  <h2 className="text-2xl font-bold text-light mb-4">Development</h2>
+                )}
                 <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {devItems.slice(0, 6).map((item) => (
                     <ServiceCard key={item.title || item.id} item={item} />
@@ -122,9 +158,12 @@ export default function DropdownMenu({
               </div>
             )}
 
-            {marketingItems.length > 0 && (
+            {/* Marketing Tab Content */}
+            {((activeTab === "marketing" && hasMarketing) || (!hasDevelopment && hasMarketing)) && (
               <div>
-                <h2 className="text-2xl font-bold text-light mb-4 ">Marketing</h2>
+                {(!hasDevelopment || !hasMarketing) && (
+                  <h2 className="text-2xl font-bold text-light mb-4">Marketing</h2>
+                )}
                 <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {marketingItems.slice(0, 6).map((item) => (
                     <ServiceCard key={item.title || item.id} item={item} />

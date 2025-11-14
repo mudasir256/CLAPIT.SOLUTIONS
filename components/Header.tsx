@@ -16,7 +16,7 @@ export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState("development");
   const [activeMenu, setActiveMenu] = useState<
-    "services" | "industries" | null
+    "services" | null
   >(null);
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -69,39 +69,44 @@ export const Header = () => {
     setActiveMenu(null);
   };
 
-  const handleMenuClick = (menu: "services" | "industries") => {
+  const handleMenuClick = (menu: "services") => {
     setIsMobileMenuOpen(false);
     setActiveMenu((prevMenu) => (prevMenu === menu ? null : menu));
   };
 
   const getDropdownProps = () => {
     if (activeMenu === "services") {
-      // Show only Development items under Services
-      const developmentServices = services.filter((s) => s.category === "development");
+      // Show both Development and Marketing services
+      const developmentServices = services
+        .filter((s) => s.category === "development")
+        .map((s) => ({
+          title: s.title,
+          href: s.href || `/services/${s.id}`,
+          description: s.description,
+          category: s.category,
+        }));
+
+      const marketingServices = services
+        .filter((s) => s.category === "marketing")
+        .map((s) => ({
+          title: s.title,
+          href: s.href || `/services/${s.id}`,
+          description: s.description,
+          category: s.category,
+        }));
 
       return {
         developmentServices,
-        marketingServices: [],
+        marketingServices,
         seeAll: "/services",
         title: "services",
       };
     }
-    if (activeMenu === "industries") {
-      // Show only Marketing items under Industries
-      const marketingIndustries = industriesData.filter((s) => s.category === "marketing");
-
-      return {
-        developmentIndustries: [],
-        marketingIndustries,
-        seeAll: "/industries",
-        title: "industries",
-      };
-    }
     return {
-      developmentIndustries: [],
-      marketingIndustries: [],
-      seeAll: "/industries",
-      title: "industries",
+      developmentServices: [],
+      marketingServices: [],
+      seeAll: "/services",
+      title: "services",
     };
   };
 
@@ -165,20 +170,20 @@ export const Header = () => {
                         scrolled ? "text-gray-900 dark:text-white" : "text-dark"
                       } ${activeMenu === "services" ? "text-secondary" : ""}`}
                     >
-                      <span>Development</span>
+                      <span>Services</span>
                       <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-current transition-all group-hover:w-full" />
                     </button>
                   </div>
 
-                  <button
-                    onClick={() => handleMenuClick("industries")}
-                    className={`menu-button relative group light:text-gray-600 hover:text-secondary font-medium ${
+                  <Link
+                    href="/case-studies"
+                    className={`relative group light:text-gray-600 hover:text-secondary font-medium ${
                       scrolled ? "text-gray-900 dark:text-white" : "text-dark"
-                    } ${activeMenu === "industries" ? "text-secondary" : ""}`}
+                    }`}
                   >
-                    <span>Marketing</span>
+                    <span>Projects</span>
                     <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-current transition-all group-hover:w-full" />
-                  </button>
+                  </Link>
                   <Link
                     href="/about"
                     className={`relative group light:text-gray-600 hover:text-secondary font-medium ${
@@ -285,17 +290,8 @@ export const Header = () => {
                     className="block px-4 py-2 text-base font-medium text-gray-900 dark:text-white rounded-lg light:bg-gray-100 dark:light:bg-gray-800 transition-colors"
                     onClick={handleLinkClick}
                   >
-                    <span>Case Studies</span>
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-current transition-all group-light:w-full" />
+                    <span>Projects</span>
                   </Link>
-                  <button
-                    className="block px-4 py-2 text-base font-medium text-gray-900 dark:text-white rounded-lg light:bg-gray-100 dark:light:bg-gray-800 transition-colors"
-                    onClick={() => handleMenuClick("industries")}
-                  >
-                    <span>Industries</span>
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-current transition-all group-light:w-full" />
-                  </button>
-
                   <Link
                     href="/about"
                     className="block px-4 py-2 text-base font-medium text-gray-900 dark:text-white rounded-lg light:bg-gray-100 dark:light:bg-gray-800 transition-colors"
@@ -303,7 +299,6 @@ export const Header = () => {
                   >
                     <span>About</span>
                   </Link>
-
                   <Link
                     href="/people"
                     className="block px-4 py-2 text-base font-medium text-gray-900 dark:text-white rounded-lg light:bg-gray-100 dark:light:bg-gray-800 transition-colors"
@@ -311,22 +306,19 @@ export const Header = () => {
                   >
                     <span>People</span>
                   </Link>
-
-                  <Link
-                    href="/blogs"
-                    className="block px-4 py-2 text-base font-medium text-gray-900 dark:text-white rounded-lg light:bg-gray-100 dark:light:bg-gray-800 transition-colors"
-                    onClick={handleLinkClick}
-                  >
-                    <span>Blogs</span>
-                  </Link>
-
                   <Link
                     href="/pricing"
                     className="block px-4 py-2 text-base font-medium text-gray-900 dark:text-white rounded-lg light:bg-gray-100 dark:light:bg-gray-800 transition-colors"
                     onClick={handleLinkClick}
                   >
                     <span>Pricing</span>
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-current transition-all group-light:w-full" />
+                  </Link>
+                  <Link
+                    href="/blogs"
+                    className="block px-4 py-2 text-base font-medium text-gray-900 dark:text-white rounded-lg light:bg-gray-100 dark:light:bg-gray-800 transition-colors"
+                    onClick={handleLinkClick}
+                  >
+                    <span>Blogs</span>
                   </Link>
                   <div className="pt-2">
                     <Button

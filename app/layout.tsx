@@ -174,12 +174,10 @@ export default function RootLayout({
         </div>
         <SmoothScroll>
           <Header />
-
           <main className="min-h-screen">{children}</main>
           <SpeedInsights />
           <Footer />
         </SmoothScroll>
-        {/* <TawkToChat /> */}
       </body>
     </html>
   );
