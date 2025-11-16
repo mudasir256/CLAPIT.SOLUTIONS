@@ -12,15 +12,17 @@ export default function LeadershipPrincipleCard({
   icon
 }: PrincipleCardProps) {
   return (
-    <div className="group bg-primary text-dark p-6 rounded-lg flex-1 min-w-[380px] hover:shadow-lg transition-all duration-300">
-      <div className="flex flex-col items-start gap-4">
-        <h3 className="text-dark text-nowrap text-xl font-semibold group-hover:text-secondary transition-colors duration-300 flex justify-between items-center w-full">
-          {title}
-          <div className="text-3xl mb-2 text-dark group-hover:text-secondary/90 transition-colors duration-300 ">
-            {icon}
-          </div>
+    <div className="group bg-primary text-dark rounded-lg min-w-0 sm:min-w-[300px] p-3 sm:p-4 md:p-6 hover:shadow-lg transition-all duration-300">
+      <div className="flex flex-col items-start gap-2 sm:gap-3 md:gap-4">
+        <h3 className="text-dark text-nowrap text-sm sm:text-base md:text-xl font-semibold group-hover:text-secondary transition-colors duration-300 flex justify-between items-center w-full gap-2">
+          <span className="truncate flex-1">{title}</span>
+          {icon && (
+            <div className="text-xl sm:text-2xl md:text-3xl flex-shrink-0 text-dark group-hover:text-secondary/90 transition-colors duration-300">
+              {icon}
+            </div>
+          )}
         </h3>
-        <p className="text-darkMedium text-left lg:text-lg md:text-md text-sm group-hover:text-dark transition-colors duration-300">
+        <p className="text-darkMedium text-left text-xs sm:text-sm md:text-md lg:text-lg group-hover:text-dark transition-colors duration-300 leading-relaxed">
           {description}
         </p>
       </div>
