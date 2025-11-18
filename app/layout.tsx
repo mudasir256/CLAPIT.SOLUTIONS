@@ -5,6 +5,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
 import Loader from "@/components/Loading";
+import FloatingContactButton from "@/components/FloatingContactButton";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { futura, mont } from "./font";
 
@@ -177,6 +178,7 @@ export default function RootLayout({
           <main className="min-h-screen">{children}</main>
           <SpeedInsights />
           <Footer />
+          <FloatingContactButton />
         </SmoothScroll>
       </body>
     </html>

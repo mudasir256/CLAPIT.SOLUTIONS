@@ -124,9 +124,10 @@ export default function ServiceCatagories({
             key={category.id}
             id={category.id}
             ref={sectionRefs.current[category.id]}
-            className="mb-12 lg:flex justify-center"
+            className="mb-12 lg:flex lg:justify-between lg:gap-8"
           >
-            <div className="w-full lg:py-0 py-8">
+            {/* Sticky Title Section on Desktop */}
+            <div className="w-full lg:w-1/3 lg:sticky lg:top-52 lg:self-start py-8 lg:py-0">
               <h1 className="text-4xl font-bold text-secondary mb-4">
                 {category.label}
               </h1>
@@ -134,7 +135,9 @@ export default function ServiceCatagories({
                 {categoryDescriptions[category.id]}
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 w-full">
+            
+            {/* Service Cards Grid */}
+            <div className="w-full sm:w-2/3 md:w-full lg:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-8">
               {services
                 .filter((service) => service.category === category.id)
                 .map((service, index) => (

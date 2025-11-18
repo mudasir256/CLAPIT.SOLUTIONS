@@ -14,6 +14,8 @@ import { SiTrustpilot, SiFiverr, SiUpwork } from "react-icons/si";
 import { useState } from "react";
 import { services } from "@/data/services";
 import { Service } from "@/components/types";
+import Image from "next/image";
+import { IMAGES } from "@/public/images";
 
 type FooterLink = {
   label: string;
@@ -117,7 +119,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-700 pt-6 mt-6 text-center">
         <h4 className="text-secondary font-semibold mb-4">Contact Us</h4>
-          <p className="text-sm text-light mb-2">CLAPIT SOLUTIONSsolutions@gmail.com</p>
+          <p className="text-sm text-light mb-2">clapitsolutions@gmail.com</p>
           <p className="text-sm text-light mb-2">+92 310 44 34 436</p>
           <p className="text-sm text-light mb-2">mycodecircle302@gmail.com</p>
           <p className="text-sm text-light mb-8">+92 307 3346 890</p>
@@ -142,7 +144,7 @@ const Footer = () => {
       <div className="hidden md:flex  justify-between gap-12 max-w-[1400px] mx-auto">
         <div className="max-w-xs">
           <h3 className="text-2xl font-bold mb-4 text-light">
-            CLAPIT SOLUTIONS <span className="text-secondary">SOLUTIONS</span>
+            <Image src={IMAGES.CLAPIT} alt="CLAPIT SOLUTIONS" width={200} height={200} className="w-full h-full object-cover rounded-xl" />
           </h3>
           <p className="text-sm text-gray-300 mb-2">
             1440 Newport Ave, San Jose, CA 95125,
@@ -213,7 +215,7 @@ const Footer = () => {
 
         <div>
           <h4 className="text-secondary font-semibold mb-4">Contact Us</h4>
-          <p className="text-sm text-light mb-2">CLAPIT SOLUTIONSsolutions@gmail.com</p>
+          <p className="text-sm text-light mb-2">clapitsolutions@gmail.com</p>
           <p className="text-sm text-light mb-2">+92 310 44 34 436</p>
           <p className="text-sm text-light mb-2">mycodecircle302@gmail.com</p>
           <p className="text-sm text-light mb-8">+92 307 3346 890</p>
@@ -244,11 +246,11 @@ const Footer = () => {
 
       <div className="flex flex-col sm:flex-row justify-between text-center mt-6 text-xs text-gray-500">
         <p>
-          &copy; 2025 <span className="text-secondary">CLAPIT SOLUTIONS.</span>SOLUTIONS All
+          &copy; 2025 <span className="text-secondary">CLAPIT SOLUTIONS.</span>All
           Rights Reserved.
         </p>
         <p>
-          <span className="text-secondary">CLAPIT SOLUTIONS.</span>SOLUTIONS
+          <span className="text-secondary">CLAPIT SOLUTIONS.</span> Pvt Ltd
         </p>
       </div>
     </footer>

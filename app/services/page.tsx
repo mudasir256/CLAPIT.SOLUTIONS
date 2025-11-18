@@ -5,6 +5,7 @@ import { caseStudies } from "@/data/case-studies";
 import React from "react";
 import ServiceCatagories from "@/components/Services/ServiceCatagories";
 import { categories, services } from "@/data/services";
+import ContactUs from "@/components/ContactUs";
 
 export default function ServicesPage() {
   return (
@@ -30,6 +31,9 @@ export default function ServicesPage() {
           console.log("Category changed:", categoryId)
         }
       />
+       <div className="px-4 md:px-8">
+        <ContactUs />
+        </div>
     </div>
   );
 }

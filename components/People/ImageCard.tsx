@@ -11,8 +11,8 @@ const images = [
     position: "top-10 left-10",
   },  
   {
-    src: IMAGES.Mehwish,
-    name: "Syeda Mehwish Kanwal",
+    src: IMAGES.Shahid,
+    name: "Shahid Khan",
     title: "Head of Marketing",
     rotate: "rotate-6",
     position: "top-10 right-10",

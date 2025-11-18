@@ -40,10 +40,10 @@ const ContactUs = () => {
                 </div>
                 <div className="w-full">
                   <CustomCard
-                    name="Syeda Mehwish Kanwal"
+                    name="Shahid Khan"
                     description="Creative Director"
-                    proflieLink="https://www.linkedin.com/in/mehwish-kanwal-814129288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                    image={IMAGES.Mehwish}
+                    proflieLink="https://www.linkedin.com/"
+                    image={IMAGES.Shahid}
                   />
                 </div>
               </div>
@@ -90,7 +90,7 @@ const ContactUs = () => {
                           <SiAmazonsimpleemailservice className="text-sm sm:text-base" />
                         </p>
                         <p className="hover:text-light cursor-pointer text-sm sm:text-md transition-all duration-300">
-                        CLAPIT SOLUTIONSsolutions@gmail.com
+                        clapitsolutions@gmail.com
                         </p>
                       </span>
                       <span className="text-secondary flex items-center gap-3 sm:gap-4 group/item w-fit">
