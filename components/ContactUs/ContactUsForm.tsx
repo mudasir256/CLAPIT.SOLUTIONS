@@ -56,12 +56,11 @@ const ContactUsForm = () => {
   };
 
   return (
-    <div className="relative w-full p-6 rounded lg:sticky lg:top-24 lg:bottom-auto bg-dark backdrop-blur-sm shadow-md z-30 max-w-full md:max-w-[500px]">
-      <div className="container mx-auto p-6">
-        <h1 className="text-2xl font-bold text-secondary">Contact Our Team</h1>
-        <span className="block w-20 h-[1px] bg-secondary mb-4"></span>
+    <div className="relative w-full h-full bg-gradient-to-br from-white via-secondary/5 to-secondary/10 rounded-3xl shadow-lg border border-secondary/10 p-6 sm:p-8 lg:p-10">
+      <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Contact Our Team</h1>
+      <span className="block w-20 h-[1px] bg-secondary mb-6"></span>
 
-        <form className="space-y-4 mt-4" onSubmit={handleSubmit}>
+      <form className="space-y-4" onSubmit={handleSubmit}>
           <input
             type="text"
             name="name"
@@ -69,7 +68,7 @@ const ContactUsForm = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
-            className="w-full p-3 bg-gray-800 text-white rounded-md border border-gray-600 focus:outline-none"
+            className="w-full p-3 bg-white text-gray-800 rounded-lg border border-secondary/10 focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary transition-all"
           />
 
           <input
@@ -79,7 +78,7 @@ const ContactUsForm = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="w-full p-3 bg-gray-800 text-white rounded-md border border-gray-600 focus:outline-none"
+            className="w-full p-3 bg-white text-gray-800 rounded-lg border border-secondary/10 focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary transition-all"
           />
 
           <input
@@ -89,7 +88,7 @@ const ContactUsForm = () => {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             required
-            className="w-full p-3 bg-gray-800 text-white rounded-md border border-gray-600 focus:outline-none"
+            className="w-full p-3 bg-white text-gray-800 rounded-lg border border-secondary/10 focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary transition-all"
           />
 
           <textarea
@@ -99,30 +98,29 @@ const ContactUsForm = () => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
-            className="w-full p-3 bg-gray-800 text-white rounded-md border border-gray-600 focus:outline-none"
+            className="w-full p-3 bg-white text-gray-800 rounded-lg border border-secondary/10 focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary transition-all resize-none"
           ></textarea>
 
-          <label className="flex items-center text-gray-400">
+          <label className="flex items-center text-gray-600 cursor-pointer">
             <input
               type="checkbox"
               name="newsletter"
               checked={newsletter}
               onChange={(e) => setNewsletter(e.target.checked)}
-              className="w-5 h-5 mr-2 accent-secondary"
+              className="w-5 h-5 mr-2 accent-secondary cursor-pointer"
             />
-            <span>Useful insights only and frequency just right.</span>
+            <span className="text-sm">Useful insights only and frequency just right.</span>
           </label>
 
           <button
             type="submit"
-            className="w-full bg-secondary text-light font-bold py-3 rounded-md hover:bg-light hover:text-dark transition duration-300"
+            className="w-full bg-secondary text-white font-bold py-3 rounded-lg hover:bg-secondary/90 hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02]"
           >
             Send
           </button>
         </form>
 
-        <ToastContainer />
-      </div>
+      <ToastContainer />
     </div>
   );
 };

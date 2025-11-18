@@ -79,22 +79,39 @@ export default function DropdownMenu({
   const hasMarketing = marketingItems.length > 0;
 
   const ServiceCard = ({ item }: { item: any }) => (
-    <motion.div key={item.title || item.id} variants={itemVariants}>
-      <Link
-        href={item.href}
-        onClick={onClose}
-        className="block lg:p-4 p-2 rounded-lg bg-light lg:h-[16vh] h-[20vh] overflow-hidden"
-      >
-        <h3 className="lg:font-medium font-bold lg:text-[16px] text-[12px] text-dark mb-1">
-          {item.title}
-        </h3>
-        {item.description && (
-          <p className="sm:text-sm text-xs text-dark ">
-            {item.description}
-          </p>
-        )}
-      </Link>
-    </motion.div>
+<motion.div key={item.title || item.id} variants={itemVariants}>
+  <Link
+    href={item.href}
+    onClick={onClose}
+    className="
+      block lg:p-4 p-2 rounded-xl relative
+
+      border border-[#d8d5d3]
+      shadow-[0_2px_4px_rgba(0,0,0,0.08),0_6px_12px_rgba(0,0,0,0.12)]
+      hover:-translate-y-1 transition-all duration-300
+      lg:h-[16vh] h-[20vh] overflow-hidden
+      before:absolute before:inset-1 before:rounded-lg
+      before:bg-gradient-to-br before:from-[#f4f1ef] before:to-[#e6e0dd]
+      before:shadow-[inset_3px_3px_8px_rgba(0,0,0,0.12),
+                      inset_-3px_-3px_8px_rgba(255,255,255,0.4)]
+      before:z-0
+    "
+  >
+    <div className="relative z-10">
+      <h3 className="lg:font-medium font-bold lg:text-[16px] text-[12px] text-dark mb-1">
+        {item.title}
+      </h3>
+
+      {item.description && (
+        <p className="sm:text-sm text-xs text-gray-500">
+          {item.description.length > 100
+            ? item.description.slice(0, 110) + "..."
+            : item.description}
+        </p>
+      )}
+    </div>
+  </Link>
+</motion.div>
   );
 
   return (

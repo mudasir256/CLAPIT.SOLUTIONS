@@ -19,42 +19,50 @@ const ContactUs = () => {
   const building2Url = getImageUrl(IMAGES.Building2);
 
   return (
-    <div className="bg-light md:flex md:flex-row md:justify-between md:items-center md:gap-12 md:py-40 p-6 lg:pt-24 pt-20">
-      <div className="container md:mx-auto mx-2">
-        <div className="flex md:flex-row flex-col justify-center gap-20 mb-16">
-          <ContactUsForm />
-          <div className="bg-light p-10 rounded-3xl shadow-xl border border-gray-200">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
-              Meet Our Team
-            </h2>
+    <div className="bg-light min-h-screen py-12 md:py-16 lg:py-24 px-4 pt-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div className="flex flex-col lg:flex-row justify-center items-start gap-8 lg:gap-12 mb-20 lg:mb-24">
+          <div className="w-full lg:w-1/2 flex-shrink-0">
+            <ContactUsForm />
+          </div>
 
-            <div className="space-y-8">
-              <div className="flex flex-col lg:space-y-0 space-y-8 md:flex-row md:items-stretch md:gap-8 w-full ">
-                <div className="w-full">
-                  <CustomCard
-                    name="Syed Mudasir Bukhari"
-                    description="CEO"
-                    proflieLink="https://www.linkedin.com/in/syed-mudasir-bukhari/"
-                    image={IMAGES.Mudasir}
-                  />
+          <div className="w-full lg:w-1/2 flex-shrink-0">
+            <div className="bg-gradient-to-br from-white via-secondary/5 to-secondary/10 p-8 lg:p-10 rounded-3xl shadow-lg border border-secondary/10 h-full">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center">
+                Meet Our Team
+              </h2>
+
+              <div className="space-y-6">
+                {/* Top Row - Two Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="h-full">
+                    <CustomCard
+                      name="Syed Mudasir Bukhari"
+                      description="CEO"
+                      proflieLink="https://www.linkedin.com/in/syed-mudasir-bukhari/"
+                      image={IMAGES.Mudasir}
+                    />
+                  </div>
+                  <div className="h-full">
+                    <CustomCard
+                      name="Shahid Khan"
+                      description="Head of Marketing"
+                      proflieLink="https://www.linkedin.com/"
+                      image={IMAGES.Shahid}
+                    />
+                  </div>
                 </div>
-                <div className="w-full">
-                  <CustomCard
-                    name="Shahid Khan"
-                    description="Creative Director"
-                    proflieLink="https://www.linkedin.com/"
-                    image={IMAGES.Shahid}
-                  />
-                </div>
-              </div>
-              <div className="flex justify-center">
-                <div className=" lg:w-[50%] w-full">
-                  <CustomCard
-                    name="Syed Mubashir Bukhari"
-                    description="Head of Sales"
-                    proflieLink="https://www.linkedin.com/in/syed-mubashir-a68384168?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                    image={IMAGES.Mubashir}
-                  />
+
+                {/* Bottom Row - Centered Single Card */}
+                <div className="flex justify-center">
+                  <div className="w-full md:w-[70%] lg:w-[60%] h-full">
+                    <CustomCard
+                      name="Syed Mubashir Bukhari"
+                      description="Head of Sales"
+                      proflieLink="https://www.linkedin.com/in/syed-mubashir-a68384168?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                      image={IMAGES.Mubashir}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -89,8 +97,8 @@ const ContactUs = () => {
                         <p className="p-1 sm:p-2 rounded-full bg-secondary/20">
                           <SiAmazonsimpleemailservice className="text-sm sm:text-base" />
                         </p>
-                        <p className="hover:text-light cursor-pointer text-sm sm:text-md transition-all duration-300">
-                        clapitsolutions@gmail.com
+                        <p className="hover:text-secondary cursor-pointer text-sm sm:text-base transition-all duration-300">
+                          clapitsolutions@gmail.com
                         </p>
                       </span>
                       <span className="text-secondary flex items-center gap-3 sm:gap-4 group/item w-fit">

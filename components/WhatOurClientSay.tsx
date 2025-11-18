@@ -37,7 +37,7 @@ export default function WhatOurClientSay() {
         </div>
         
         <div className="relative">
-          <div className="relative bg-secondary/20 rounded-xl sm:rounded-2xl md:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl overflow-hidden">
+          <div className="relative bg-secondary/5 rounded-xl sm:rounded-2xl md:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl overflow-hidden">
             {/* Slider Content */}
             <div className="relative min-h-[280px] sm:min-h-[320px] md:min-h-[350px]">
               {textTestimonials.map((testimonial, index) => (
