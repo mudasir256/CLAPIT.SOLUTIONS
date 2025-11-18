@@ -1,25 +1,26 @@
 import React from "react";
 import { getConnect } from "@/data/getConnect";
-import AnimatedSection1 from "../AnimatedSection1";
+import { ArrowRight } from "lucide-react";
 
 export default function CaseStudiesStarted() {
   return (
-    <div className="bg-light max-w-7xl mx-auto  rounded-lg p-10 my-10 shadow-lg ">
-      <div className="flex flex-col md:flex-row items-center justify-between mx-auto text-dark  max-w-6xl ">
-        <div className="text-left max-w-lg">
-          <AnimatedSection1>
-            <h2 className="lg:text-5xl text-2xl font-bold mb-4 text-secondary">
+    <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-secondary to-secondary/80">
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+          <div className="text-center md:text-left max-w-2xl">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
               {getConnect.title}
             </h2>
-            <p className="lg:text-2xl text-xl mb-6 text-dark font-medium">{getConnect.description}</p>
-          </AnimatedSection1>
-        </div>
-        <AnimatedSection1>
-          <button className="bg-secondary text-white hover:bg-primary hover:text-secondary font-semibold px-6 py-3 rounded-full shadow-md light:bg-gray-100">
-            {getConnect.buttonText}
+            <p className="text-lg sm:text-xl md:text-2xl text-white/90 leading-relaxed">
+              {getConnect.description}
+            </p>
+          </div>
+          <button className="group bg-white hover:bg-gray-50 text-secondary font-semibold px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center gap-2 whitespace-nowrap">
+            <span>{getConnect.buttonText}</span>
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
-        </AnimatedSection1>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

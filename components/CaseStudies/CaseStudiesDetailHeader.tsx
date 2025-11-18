@@ -1,6 +1,7 @@
 import React from "react";
 import { StaticImageData } from "next/image";
 import Link from "next/link";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 
 type CaseStudiesDetailHeaderProps = {
   bgImage: string | StaticImageData;
@@ -22,47 +23,51 @@ const CaseStudiesDetailHeader: React.FC<CaseStudiesDetailHeaderProps> = ({
   const backgroundImage = typeof bgImage === "string" ? bgImage : bgImage.src;
 
   return (
-    <div
-      className={`relative w-full h-[60vh] bg-cover bg-center py-12 rounded-br-[70px] shadow-lg`}
-      style={{
-        backgroundImage: `url("${backgroundImage}")`,
-      }}
-    >
-      <div className="absolute inset-0 bg-black/90 rounded-br-[70px] "></div>
+    <div className="relative w-full min-h-[60vh] sm:min-h-[30vh] bg-cover bg-center bg-fixed ">
+      <div
+        className="absolute inset-0 bg-cover bg-center rounded-b-[40px]"
+        style={{
+          backgroundImage: `url("${backgroundImage}")`,
+        }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/90 to-black/90 rounded-b-[40px]"></div>
 
-      <div className="relative z-10 max-w-[96rem] mx-auto px-8 pt-24">
-        <nav className="text-md font-medium text-secondary mb-4">
-          <Link href="/case-studies">Case Studies</Link>
-          <span>{" > "}</span>
-          <span>{title}</span>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:pt-24 pt-28 sm:pt-28 pb-16 sm:pb-24">
+        <nav className="mb-8 sm:mb-12">
+          <Link 
+            href="/case-studies"
+            className="inline-flex items-center text-sm sm:text-base text-white/80 hover:text-white transition-colors group"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
+            Back to Case Studies
+          </Link>
         </nav>
-
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-          <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase text-light mb-2 tracking-wide">
+        <div className="max-w-4xl">
+          {category && (
+            <p className="text-xs sm:text-sm font-semibold uppercase text-secondary mb-3 sm:mb-4 tracking-wider">
               {category}
             </p>
-            <h1 className="lg:text-5xl text-2xl font-extrabold text-secondary leading-tight mb-4 drop-shadow-md">
-              {title}
-            </h1>
-            {subtitle && (
-              <h2 className="lg:text-xl text-lg font-medium text-light drop-shadow-md">
-                {subtitle}
-              </h2>
-            )}
-          </div>
-          <div className="mt-6 md:mt-0">
-            {link && (
-              <a
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xl font-semibold text-white bg-secondary px-4 py-2 rounded-lg shadow-md"
-              >
-                {logoText}
-              </a>
-            )}
-          </div>
+          )}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 sm:mb-6">
+            {title}
+          </h1>
+          {subtitle && (
+            <p className="text-base sm:text-lg md:text-xl text-white/90 leading-relaxed mb-8 sm:mb-10 max-w-3xl">
+              {subtitle}
+            </p>
+          )}
+          
+          {link && (
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+            >
+              <span>Visit Project</span>
+              <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            </a>
+          )}
         </div>
       </div>
     </div>

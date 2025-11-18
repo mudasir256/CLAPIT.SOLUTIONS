@@ -1,157 +1,138 @@
 
-
-
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useState, useEffect } from 'react';
 import { textTestimonials } from "@/data/testimonials";
-gsap.registerPlugin(ScrollTrigger);
 
 export default function WhatOurClientSay() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    
-    if (typeof window !== 'undefined') {
-      const lenis = (window as any).lenis;
-      if (lenis) {
-        ScrollTrigger.scrollerProxy(document.body, {
-          scrollTop(value) {
-            if (arguments.length) lenis.scrollTo(value, { immediate: true });
-            return lenis.scroll;
-          },
-          getBoundingClientRect() {
-            return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
-          },
-        });
-        lenis.on('scroll', ScrollTrigger.update);
-      }
-    }
-
-    const ctx = gsap.context(() => {
-      if (!sectionRef.current) return;
-
-      const stepGap = () => window.innerHeight * 0.8; 
-      const total = textTestimonials.length;
-      const endDistance = stepGap() * (total - 1);
-
-      const st = ScrollTrigger.create({
-        trigger: sectionRef.current,
-        start: 'top top',
-        end: `+=${endDistance}`,
-        pin: true,             
-        pinSpacing: true,
-        scrub: 0.4,
-        snap: {
-          snapTo: (value) => {
-            const idx = Math.round(value * (total - 1));
-            return idx / (total - 1);
-          },
-          duration: 0.2,
-          ease: 'power1.out',
-        },
-        onUpdate: (self) => {
-          const idx = Math.round(self.progress * (total - 1));
-          setActiveIndex(idx);
-        },
-      });
-
-      const onResize = () => {
-        st.vars.end = `+=${stepGap() * (total - 1)}`;
-        st.refresh();
-      };
-      window.addEventListener('resize', onResize);
-
-      return () => {
-        window.removeEventListener('resize', onResize);
-        st.kill();
-      };
-    }, sectionRef);
-
-    return () => {
-      ctx.revert();
-      ScrollTrigger.getAll().forEach((t) => t.kill());
-    };
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % textTestimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
   }, []);
 
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % textTestimonials.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + textTestimonials.length) % textTestimonials.length);
+  };
+
   return (
-    <section ref={sectionRef} className="relative py-12 sm:py-16 md:py-24 px-4 sm:px-6 md:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-8 sm:mb-12 md:mb-20">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight px-2">
-            <span className="text-dark">What Our</span>
-            <span className="text-secondary ml-1 sm:ml-2">Clients Say</span>
-          </h1>
+    <section className="relative py-6 sm:py-8 md:py-12 px-3 sm:px-4 md:px-6 overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+      <div className="max-w-4xl mx-auto relative z-10">
+        {/* Header */}
+        <div className="text-center mb-4 sm:mb-6 md:mb-8">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-dark">
+            CLIENT REVIEW
+          </h2>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-start md:items-center justify-center">
-          <div className="order-2 md:order-1 w-full">
-            <div className="relative pl-4 sm:pl-6 md:pl-8">
-               <div className="absolute left-2 sm:left-4 md:left-8 lg:left-14 top-2 sm:top-4 md:top-8 bottom-2 sm:bottom-4 md:bottom-8 w-0 border-l-2 border-dashed border-light" />
-              <div className="space-y-6 sm:space-y-8 md:space-y-10">
-                {textTestimonials.map((testimonial, i) => {
-                  const isActive = i === activeIndex;
-                  return (
-                    <button
-                      key={i}
-                      type="button"
-                      className="step-item group relative flex items-center gap-3 sm:gap-4 text-left w-full"
-                      onClick={() => setActiveIndex(i)}
-                    >
-                      <div className="flex-shrink-0 relative z-10 mt-0.5">
-                        <div
-                          className={[
-                            'w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center font-bold text-sm sm:text-base md:text-lg transition-all duration-300',
-                            isActive ? 'bg-secondary text-primary scale-110 shadow' : 'bg-light text-darkMedium border border-light',
-                          ].join(' ')}
+        
+        <div className="relative">
+          <div className="relative bg-secondary/20 rounded-xl sm:rounded-2xl md:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-2xl overflow-hidden">
+            {/* Slider Content */}
+            <div className="relative min-h-[280px] sm:min-h-[320px] md:min-h-[350px]">
+              {textTestimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className={`absolute inset-0 transition-opacity duration-700 ${
+                    index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+                  }`}
+                >
+                  <div className="flex flex-col items-center text-center h-full justify-center">
+                    {/* Profile Icon - Circular at top */}
+                    <div className="relative mb-3 sm:mb-4">
+                      <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full bg-gradient-to-br from-secondary to-accent border-2 sm:border-4 border-white shadow-lg flex items-center justify-center">
+                        <svg
+                          className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
                         >
-                          {i + 1}
-                        </div>
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                          />
+                        </svg>
                       </div>
-                      <div
-                        className={[
-                          'w-full max-w-full sm:max-w-sm md:w-[520px] p-3 sm:p-4 rounded-lg sm:rounded-xl transition-all duration-300',
-                          isActive ? 'bg-secondary text-primary shadow-lg' : 'bg-primary border border-light',
-                        ].join(' ')}
-                      >
-                        <h3 className={`text-base sm:text-lg font-bold mb-0.5 sm:mb-1 ${isActive ? 'text-primary' : 'text-dark'}`}>{testimonial.name}</h3>
-                        <p className={`text-xs sm:text-sm ${isActive ? 'text-primary opacity-90' : 'text-medium'}`}>{testimonial.position}</p>
-                      </div>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
-          <div className="order-1 md:order-2 w-full">
-            <div className="bg-gradient-to-r from-lightMedium/20 to-secondary/20 rounded-xl sm:rounded-2xl shadow-xl p-4 sm:p-6 md:p-8">
-              <div className="relative w-full min-h-[250px] sm:min-h-[300px] md:min-h-[400px]">
-                {textTestimonials.map((testimonial, i) => (
-                  <div
-                    key={i}
-                    className={`absolute inset-0 transition-opacity duration-400 flex items-center ${
-                      i === activeIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'
-                    }`}
-                    style={{ willChange: 'opacity' }}
-                  >
-                    <div className="w-full">
-                      <p className="text-sm sm:text-base md:text-lg leading-relaxed sm:leading-relaxed text-dark px-1 sm:px-0">
-                        &ldquo;{testimonial.text}&rdquo;
-                      </p>
-                
                     </div>
+
+                    {/* Star Rating */}
+                    <div className="flex items-center justify-center gap-0.5 sm:gap-1 mb-3 sm:mb-4">
+                      {[...Array(5)].map((_, i) => (
+                        <svg
+                          key={i}
+                          className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-yellow-400"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      ))}
+                    </div>
+
+                    {/* Testimonial Text */}
+                    <p className="text-dark text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed mb-3 sm:mb-4 max-w-2xl mx-auto px-2 sm:px-4">
+                      {testimonial.text}
+                    </p>
+
+                    {/* Client Name */}
+                    <h3 className="text-dark text-sm sm:text-base md:text-lg lg:text-xl font-semibold mb-2 sm:mb-4">
+                      {testimonial.name}
+                    </h3>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Navigation Arrows - Hidden on mobile */}
+            <button
+              onClick={prevSlide}
+              className="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full items-center justify-center shadow-lg hover:bg-white transition-colors z-20"
+              aria-label="Previous testimonial"
+            >
+              <svg className="w-6 h-6 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+              
+            <button
+              onClick={nextSlide}
+              className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full items-center justify-center shadow-lg hover:bg-white transition-colors z-20"
+              aria-label="Next testimonial"
+            >
+              <svg className="w-6 h-6 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+
+            {/* Dots Indicator - Inside the box */}
+            <div className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 flex justify-center items-center gap-1.5 sm:gap-2 z-20">
+              {textTestimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`transition-all duration-300 rounded-full touch-manipulation ${
+                    index === currentIndex
+                      ? 'w-6 sm:w-8 h-1.5 sm:h-2 bg-secondary'
+                      : 'w-1.5 sm:w-2 h-1.5 sm:h-2 bg-white/60 active:bg-white/80'
+                  }`}
+                  aria-label={`Go to testimonial ${index + 1}`}
+                />
+              ))}
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );

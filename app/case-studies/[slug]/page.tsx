@@ -12,6 +12,8 @@ import CaseStudiesStarted from "@/components/CaseStudies/CaseStudiesStarted";
 import Data from "@/components/CaseStudies/Data";
 import ArticleSchema from "@/components/StructuredData/ArticleSchema";
 import BreadcrumbSchema from "@/components/StructuredData/BreadcrumbSchema";
+import GetStarted from "@/components/GetStarted";
+import ContactUs from "@/components/ContactUs";
 
 interface Params {
   slug: string;
@@ -64,7 +66,7 @@ export default async function CaseStudyPage({
   ];
 
   return (
-    <div>
+    <div className="min-h-screen bg-white">
       <ArticleSchema
         title={`${study.title || "Case Study"} - CLAPIT SOLUTIONS`}
         description={study.description || study.details || ""}
@@ -90,7 +92,9 @@ export default async function CaseStudyPage({
       <Data data={study.data} />
       <Result results={study.results || []} />
       <Conclusion study={study} />
-      <CaseStudiesStarted />
+      <div className="px-4 md:px-8">
+        <ContactUs />
+      </div>
     </div>
   );
 }

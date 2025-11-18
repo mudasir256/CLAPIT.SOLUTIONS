@@ -49,83 +49,91 @@ export default function Data({ data }: { data: CaseStudy["data"] }) {
   }, [data?.sections]);
 
   return (
-    <div className="relative w-full max-w-8xl mx-auto mb-24">
-      {data?.sections?.map((section, sectionIndex) => (
-        <div
-          key={sectionIndex}
-          className="overflow-hidden rounded-lg max-w-6xl mx-auto mt-12"
-        >
-          {section.title && (
-            <h2 className="lg:text-3xl text-2xl text-secondary font-bold mb-4 text-center md:text-left mt-8 px-4">
-              {section.title}
-            </h2>
-          )}
+    <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <div className="max-w-6xl mx-auto">
+        {data?.sections?.map((section, sectionIndex) => (
+          <div
+            key={sectionIndex}
+            className="mb-16 sm:mb-20 last:mb-0"
+          >
+            {section.title && (
+              <h2 className="text-2xl sm:text-3xl md:text-4xl text-dark font-bold mb-4 sm:mb-6">
+                {section.title}
+              </h2>
+            )}
 
-          {section.description && (
-            <p className="text-dark mb-4 text-center md:text-left px-4 font-bold text-xl">
-              {section.description}
-            </p>
-          )}
+            {section.description && (
+              <p className="text-base sm:text-lg md:text-xl text-medium mb-6 sm:mb-8 leading-relaxed">
+                {section.description}
+              </p>
+            )}
 
-          <ul className="mt-4 px-4 space-y-3 text-gray-700 w-full ">
-            {section.subDescriptions?.map((text, index) => (
-              <li
-                key={index}
-                className="flex items-start justify-center lg:justify-start font-medium text-lg"
-              >
-                <span className="mr-2 text-secondary">&#9671;</span>
-                {text}
-              </li>
-            ))}
-          </ul>
+            {section.subDescriptions && section.subDescriptions.length > 0 && (
+              <ul className="space-y-3 sm:space-y-4 mb-8 sm:mb-10">
+                {section.subDescriptions.map((text, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-4"
+                  >
+                    <div className="flex-shrink-0 w-2 h-2 rounded-full bg-secondary mt-2"></div>
+                    <p className="text-base sm:text-lg text-medium leading-relaxed flex-1">
+                      {text}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            )}
 
-          {section.images && (
-            <div className="flex justify-center flex-wrap gap-4 mt-8">
-              {section.images.map((image, index) => (
-                <div key={index} className="flex md:w-auto">
-                  {image.isMobile ? (
-                    <IPhoneFrame>
+            {section.images && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-8 sm:mt-10">
+                {section.images.map((image, index) => (
+                  <div key={index} className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    {image.isMobile ? (
+                      <div className="flex justify-center bg-gray-50 p-4">
+                        <IPhoneFrame>
+                          <Image
+                            src={image.src}
+                            alt={image.alt}
+                            height={600}
+                            width={300}
+                            className="w-full h-full object-cover"
+                          />
+                        </IPhoneFrame>
+                      </div>
+                    ) : (
                       <Image
                         src={image.src}
                         alt={image.alt}
-                        height={600}
-                        width={300}
-                        className="w-full h-full object-cover"
+                        height={500}
+                        width={500}
+                        className="w-full h-auto object-cover"
                       />
-                    </IPhoneFrame>
-                  ) : (
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      height={500}
-                      width={500}
-                      className="rounded-lg shadow-md w-full h-auto max-h-[500px] max-w-[400px] object-cover"
-                    />
-                  )}
-                </div>
-              ))}
-            </div>
-          )}
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
 
-          {section.video && (
-            <div className="flex justify-center mt-8">
-              <div className="rounded-lg overflow-hidden">
+            {section.video && (
+              <div className="mt-8 sm:mt-10 rounded-2xl overflow-hidden shadow-2xl">
                 {section.video.isMobile ? (
-                  <IPhoneFrame>
-                    <video
-                      className="w-full h-full object-cover"
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                    >
-                      <source src={section.video.src} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  </IPhoneFrame>
+                  <div className="flex justify-center bg-gray-50 p-8">
+                    <IPhoneFrame>
+                      <video
+                        className="w-full h-full object-cover"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                      >
+                        <source src={section.video.src} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    </IPhoneFrame>
+                  </div>
                 ) : (
                   <video
-                    className="rounded-lg w-full max-w-7xl"
+                    className="w-full h-auto"
                     autoPlay
                     loop
                     muted
@@ -136,73 +144,75 @@ export default function Data({ data }: { data: CaseStudy["data"] }) {
                   </video>
                 )}
               </div>
-            </div>
-          )}
+            )}
 
-          {section.sliderImages && section.sliderImages.length > 0 && (
-            <>
-              <div className="relative overflow-hidden mt-8">
-                <div
-                  className="flex transition-transform duration-500 ease-in-out"
-                  style={{
-                    transform: `translateX(-${
-                      sliderIndices[sectionIndex] * 100
-                    }%)`,
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  {section.sliderImages.map((image, index) => (
-                    <div
-                      key={index}
-                      className="w-full flex-shrink-0 flex justify-center"
-                    >
-                      {image.isMobile ? (
-                        <IPhoneFrame>
+            {section.sliderImages && section.sliderImages.length > 0 && (
+              <div className="mt-8 sm:mt-10">
+                <div className="relative overflow-hidden rounded-2xl">
+                  <div
+                    className="flex transition-transform duration-500 ease-in-out"
+                    style={{
+                      transform: `translateX(-${
+                        sliderIndices[sectionIndex] * 100
+                      }%)`,
+                    }}
+                  >
+                    {section.sliderImages.map((image, index) => (
+                      <div
+                        key={index}
+                        className="w-full flex-shrink-0 flex justify-center min-w-full"
+                      >
+                        {image.isMobile ? (
+                          <div className="flex justify-center bg-gray-50 p-8">
+                            <IPhoneFrame>
+                              <Image
+                                src={image.src}
+                                alt={image.alt}
+                                width={300}
+                                height={600}
+                                className="w-full h-full object-cover"
+                              />
+                            </IPhoneFrame>
+                          </div>
+                        ) : (
                           <Image
                             src={image.src}
                             alt={image.alt}
-                            width={300}
+                            width={1200}
                             height={600}
-                            className="w-full h-full object-cover"
+                            className="w-full h-auto object-cover"
                           />
-                        </IPhoneFrame>
-                      ) : (
-                        <Image
-                          src={image.src}
-                          alt={image.alt}
-                          width={800}
-                          height={400}
-                          className="w-3/4 h-auto object-cover rounded-lg shadow-md"
-                        />
-                      )}
-                    </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex justify-center gap-2 mt-6">
+                  {section.sliderImages.map((_, index) => (
+                    <button
+                      key={index}
+                      className={`h-2 rounded-full transition-all duration-300 ${
+                        sliderIndices[sectionIndex] === index
+                          ? "bg-secondary w-8"
+                          : "bg-gray-300 w-2 hover:bg-gray-400"
+                      }`}
+                      onClick={() => {
+                        setSliderIndices((prev) => {
+                          const newIndices = [...prev];
+                          newIndices[sectionIndex] = index;
+                          return newIndices;
+                        });
+                      }}
+                      aria-label={`Go to slide ${index + 1}`}
+                    />
                   ))}
                 </div>
               </div>
-
-              <div className="flex justify-center mt-4 space-x-2 ">
-                {section.sliderImages.map((_, index) => (
-                  <button
-                    key={index}
-                    className={`h-3 w-3 rounded-full transition-all duration-300 ${
-                      sliderIndices[sectionIndex] === index
-                        ? "bg-gray-800 w-4"
-                        : "bg-gray-400"
-                    }`}
-                    onClick={() => {
-                      setSliderIndices((prev) => {
-                        const newIndices = [...prev];
-                        newIndices[sectionIndex] = index;
-                        return newIndices;
-                      });
-                    }}
-                  />
-                ))}
-              </div>
-            </>
-          )}
-        </div>
-      ))}
-    </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }

@@ -1,14 +1,33 @@
 import React from "react";
 import { CaseStudy } from "../types";
-import AnimatedSection1 from "../AnimatedSection1";
+import { CheckCircle2 } from "lucide-react";
 
 export default function Conclusion({ study }: { study: CaseStudy }) {
+  if (!study.Conclusion) return null;
+
   return (
-    <div className="max-w-6xl mx-auto p-6 rounded-lg shadow-md  mt-12">
-      <h1 className="text-3xl font-bold text-secondary mb-4">Conclusion</h1>
-      <div className="text-xl text-dark font-medium leading-relaxed">
-        <AnimatedSection1>{study.Conclusion}</AnimatedSection1>
+    <section className="pb-14 px-4 sm:px-6 lg:px-8 bg-white">
+      <div className="max-w-5xl mx-auto">
+        {/* Heading */}
+        <div className="text-center mb-8 sm:mb-10">
+          <h2 className="text-xl sm:text-2xl font-semibold text-dark tracking-tight flex items-center justify-center gap-2">
+            <CheckCircle2 className="w-5 h-5 text-secondary" />
+            Conclusion
+          </h2>
+        </div>
+
+        {/* Conclusion Content */}
+        <div className="
+          border border-lightMedium/40 rounded-xl
+          px-6 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12
+          bg-gradient-to-br from-white to-lightMedium/10
+          shadow-sm
+        ">
+          <p className="text-sm sm:text-base md:text-lg text-medium leading-relaxed text-center">
+            {study.Conclusion}
+          </p>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

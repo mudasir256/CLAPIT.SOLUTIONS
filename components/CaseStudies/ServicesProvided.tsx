@@ -1,5 +1,4 @@
 import React from "react";
-import AnimatedSection1 from "../AnimatedSection1";
 
 interface Service {
   name: string;
@@ -12,29 +11,29 @@ export default function ServicesProvided({
   services: Service[];
 }) {
   return (
-    <div className="mt-8 container mx-auto px-4 max-w-6xl">
-      <div className="flex flex-col items-start gap-4 mt-4 mx-auto text-start">
-        <h2 className="lg:text-5xl text-3xl font-semibold text-secondary mb-2">
+    <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-dark mb-12 text-center">
           Services Provided
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-7xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {services.map((service, index) => (
             <div
               key={index}
-              className="flex items-center justify-start py-2 rounded-lg cursor-pointer"
+              className="bg-white p-6 rounded-xl border border-gray-100 hover:border-secondary/30 hover:shadow-lg transition-all duration-300 group"
             >
-              <AnimatedSection1>
-                <div className="flex items-center ">
-                  <service.icon className="w-8 h-8 mr-2 text-primary bg-secondary p-1 rounded-lg" />
-                  <span className="text-gray-800 font-medium text-xl">
-                    {service.name}
-                  </span>
+              <div className="flex items-center gap-4">
+                <div className="flex-shrink-0 w-12 h-12 bg-secondary/10 group-hover:bg-secondary rounded-lg flex items-center justify-center transition-colors">
+                  <service.icon className="w-6 h-6 text-dark" />
                 </div>
-              </AnimatedSection1>
+                <span className="text-dark font-semibold text-lg">
+                  {service.name}
+                </span>
+              </div>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

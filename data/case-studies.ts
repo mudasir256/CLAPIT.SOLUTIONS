@@ -1089,7 +1089,7 @@ export const caseStudies: (CaseStudy & { featured?: boolean })[] = [
       "SEO & Marketing Optimization",
       "Payment Gateway Integration"
     ],
-    title: "Reid Daytona Watches & Luxury Goods",
+    title: "Reid Daytona Watches",
     subtitle: "Dubai’s Trusted Watch Dealer Since 2014",
     details:
       "Reid Daytona is Dubai’s most trusted name in luxury watches, specializing in authentic, pre-owned, and brand-new timepieces. Built on transparency and trust, the platform connects global collectors to verified luxury pieces from Rolex, Patek Philippe, Vacheron Constantin, and Omega, all backed by documentation, warranty, and buy-back guarantees.",

@@ -21,26 +21,26 @@ export default function DescriptionSection({ study }: { study: CaseStudy }) {
   }
 
   return (
-    <div className="pt-32 pb-20 bg-gradient-to-b from-gray-50 to-gray-100">
-      <div className="container mx-auto ">
-        <div className="max-w-8xl mx-auto bg-light p-8 rounded-lg shadow-lg">
+    <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
+      <div className="max-w-6xl mx-auto">
+        <div className="mb-12 sm:mb-16 text-center">
           <AnimatedSection1>
-            <h1 className="lg:text-5xl text-3xl font-extrabold text-secondary mb-10 capitalize text-center">
-              What is {study.title}?
-            </h1>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-dark mb-6">
+              Overview
+            </h2>
           </AnimatedSection1>
+          <AnimatedSection1>
+            <p className="text-lg sm:text-xl md:text-2xl text-medium leading-relaxed max-w-4xl mx-auto">
+              {study.description}
+            </p>
+          </AnimatedSection1>
+        </div>
 
-          <div className="grid md:grid-cols-1 gap-10 mb-12 items-center">
-            <div>
-              <AnimatedSection1>
-                <p className="lg:text-2xl text-xl font-medium text-center text-dark leading-relaxed mb-6">
-                  {study.description}
-                </p>
-              </AnimatedSection1>
-
-              {study.video ? (
-              <div className="rounded-lg overflow-hidden flex justify-center">
-                {study.video?.isMobile ? (
+        <div className="rounded-2xl overflow-hidden shadow-2xl">
+          {study.video ? (
+            <div className="relative w-full">
+              {study.video?.isMobile ? (
+                <div className="flex justify-center py-8 bg-gray-50">
                   <IPhoneFrame>
                     <video
                       className="w-full h-full object-cover"
@@ -53,38 +53,36 @@ export default function DescriptionSection({ study }: { study: CaseStudy }) {
                       Your browser does not support the video tag.
                     </video>
                   </IPhoneFrame>
-                ) : (
-                  <video
-                    className="rounded-lg w-full max-w-7xl"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                  >
-                    <source src={study.video?.src} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                )}
-              </div>
-              ) : (
-                <div className="rounded-lg overflow-hidden flex justify-center">
-                  {study.image && (
-                    <Image
-                      src={study.image}
-                      alt={study.title}
-                      width={1200}
-                      height={675}
-                      className="rounded-lg w-full max-w-7xl object-cover"
-                      priority
-                    />
-                  )}
                 </div>
+              ) : (
+                <video
+                  className="w-full h-auto"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                >
+                  <source src={study.video?.src} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               )}
-
             </div>
-          </div>
+          ) : (
+            <div className="relative w-full">
+              {study.image && (
+                <Image
+                  src={study.image}
+                  alt={study.title}
+                  width={1200}
+                  height={675}
+                  className="w-full h-auto object-cover"
+                  priority
+                />
+              )}
+            </div>
+          )}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
