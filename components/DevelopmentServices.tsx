@@ -35,7 +35,7 @@ export default function DevelopmentServices({
           </div>
         )}
 
-        <div className="flex flex-wrap justify-between gap-6 max-w-[1000px] mx-auto">
+        <div className="flex flex-col lg:flex-row flex-wrap justify-center lg:justify-between items-center gap-6 max-w-[1000px] mx-auto">
           {items.map((item, idx) =>
             item.title && item.description ? (
               <LeadershipPrincipleCard
