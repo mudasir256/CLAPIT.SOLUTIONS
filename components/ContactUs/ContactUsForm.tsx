@@ -56,7 +56,7 @@ const ContactUsForm = () => {
   };
 
   return (
-    <div className="relative w-full h-full bg-gradient-to-br from-white via-secondary/5 to-secondary/10 rounded-3xl shadow-lg border border-secondary/10 p-6 sm:p-8 lg:p-10">
+    <div className="relative w-full  bg-gradient-to-br from-white via-secondary/5 to-secondary/10 rounded-3xl shadow-lg border border-secondary/10 p-6 sm:p-8 lg:p-10">
       <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">Contact Our Team</h1>
       <span className="block w-20 h-[1px] bg-secondary mb-6"></span>
 

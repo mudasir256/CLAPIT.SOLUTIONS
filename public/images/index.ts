@@ -127,6 +127,8 @@ import AI_BUSINESS_Finance from "./accounting1.jpg";
 import OPENAI1 from "./langchain.png";
 import OPENAI2 from "./chatbot.png";
 import Shahid from "./shahidkhan.png";
+import AIBLOG1 from "./aiBLOGS.jpg";
+import AIBLOG2 from "./impactAI.webp";
 
 
 
@@ -260,5 +262,7 @@ export const IMAGES: Record<string, any> = {
   OPENAI1,
   OPENAI2,
   Shahid,
+  AIBLOG1,
+  AIBLOG2,
 };
 

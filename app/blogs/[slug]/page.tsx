@@ -77,14 +77,18 @@ export default async function BlogPage({
       <BlogsDetailsHeader blogPost={blog} />
 
       <div className="flex flex-col lg:flex-row gap-8 pt-20">
-        <div className="lg:w-1/4">
-          <BlogTableOfContent blogPost={blog} />
+        <div className="lg:w-1/4 order-2 lg:order-1">
+          <div className="lg:sticky lg:top-24">
+            <BlogTableOfContent blogPost={blog} />
+          </div>
         </div>
-        <div className="lg:w-2/4">
+        <div className="lg:w-2/4 order-1 lg:order-2">
           <BlogSections blogPost={blog} />
         </div>
-        <div className="lg:w-1/4">
-        <ContactUsForm />
+        <div className="lg:w-1/4 order-3">
+          <div className="lg:sticky lg:top-24 lg:self-start">
+            <ContactUsForm />
+          </div>
         </div>
       </div>
 
