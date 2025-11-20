@@ -8,6 +8,7 @@ import Loader from "@/components/Loading";
 import FloatingContactButton from "@/components/FloatingContactButton";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { futura, mont } from "./font";
+import { Analytics } from "@vercel/analytics/next"
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || 'https://www.clapit.solutions';
 
@@ -176,6 +177,7 @@ export default function RootLayout({
         <SmoothScroll>
           <Header />
           <main className="min-h-screen">{children}</main>
+          <Analytics/>
           <SpeedInsights />
           <Footer />
           <FloatingContactButton />
