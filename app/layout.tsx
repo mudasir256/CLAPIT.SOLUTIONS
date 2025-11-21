@@ -9,6 +9,7 @@ import FloatingContactButton from "@/components/FloatingContactButton";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { futura, mont } from "./font";
 import { Analytics } from "@vercel/analytics/next"
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.SITE_URL || 'https://www.clapit.solutions';
 
@@ -144,8 +145,8 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <GoogleAnalytics gaId="G-X78G5LPNHQ"/>
       <head>
-        {/* Performance & SEO Optimizations */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
@@ -158,6 +159,7 @@ export default function RootLayout({
         <meta name="distribution" content="global" />
         <meta name="rating" content="general" />
       </head>
+
       <body
         className={`${futura.variable} ${mont.variable} antialiased overflow-x-hidden`}
         suppressHydrationWarning
@@ -183,6 +185,7 @@ export default function RootLayout({
           <FloatingContactButton />
         </SmoothScroll>
       </body>
+
     </html>
   );
 }
