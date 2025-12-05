@@ -15,6 +15,8 @@ const teamMembers: TeamMember[] = [
   { image: IMAGES.Usama, name: "Usama", position: "Graphic Designer" },
   { image: IMAGES.Abuzar, name: "Abuzar", position: "Web Lead Developer" },
   { image: IMAGES.Arsal, name: "Arsal", position: "Backend/AI Developer" },
+  { image: IMAGES.RanaAhmad, name: "Rana Ahmad", position: "Full Stack Developer" },
+  { image: IMAGES.Usman, name: "Usman", position: "Frontend Developer" },
 ];
 
 export default function TeamBubbleContent() {

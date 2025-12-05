@@ -108,6 +108,8 @@ import Awais from "./awais.png";
 import Usama from "./usama.jpg";
 import Abuzar from "./abuzar.jpg";
 import Arsal from "./arsal.jpg";
+import RanaAhmad from "./RANAAHMAD.jpg";
+import Usman from "./USMAN.png";
 import Robot from "./robot.png";
 import Headbg from "./bg1.png"
 import Linkedin from "./linkedin.png";
@@ -264,5 +266,7 @@ export const IMAGES: Record<string, any> = {
   Shahid,
   AIBLOG1,
   AIBLOG2,
+  RanaAhmad,
+  Usman,
 };
 
