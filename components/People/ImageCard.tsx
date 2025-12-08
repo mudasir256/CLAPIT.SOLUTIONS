@@ -18,9 +18,9 @@ const images = [
     position: "top-10 right-10",
   },
   {
-    src: IMAGES.Mubashir,
-    name: "Syed Mubashir Bukhari",
-    title: "Head of Sales",
+    src: IMAGES.Arsal,
+    name: "Arsal Ali",
+    title: "Chief Technology Officer (CTO)",
     position: "top-40 left-1/2 -translate-x-1/2",
   },
 ];
