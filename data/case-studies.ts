@@ -47,7 +47,7 @@ export const caseStudies: (CaseStudy & { featured?: boolean })[] = [
     video: { src: `/whosedm.mov`, isMobile: false },
     image: IMAGES.WhoseDM1.src,
     alt: "WhoseDM",
-    link: "https://whosedm.vercel.app/",
+    link: "https://whosedm.com/",
     technologies: [
       "Next.js 14",
       "React 18",
