@@ -120,7 +120,7 @@ const Footer = () => {
         <div className="border-t border-gray-700 pt-6 mt-6 text-center">
         <h4 className="text-secondary font-semibold mb-4">Contact Us</h4>
           <p className="text-sm text-light mb-2">clapitsolutions@gmail.com</p>
-          <p className="text-sm text-light mb-2">+92 310 44 34 436</p>
+          <p className="text-sm text-light mb-2"></p>
           <p className="text-sm text-light mb-2">mycodecircle302@gmail.com</p>
           <p className="text-sm text-light mb-8">+92 307 3346 890</p>
           <button className="w-full bg-secondary hover:bg-lightMedium text-dark font-semibold py-2 rounded-full">
@@ -216,7 +216,7 @@ const Footer = () => {
         <div>
           <h4 className="text-secondary font-semibold mb-4">Contact Us</h4>
           <p className="text-sm text-light mb-2">clapitsolutions@gmail.com</p>
-          <p className="text-sm text-light mb-2">+92 310 44 34 436</p>
+          <p className="text-sm text-light mb-2">+1 (647) 883-6143</p>
           <p className="text-sm text-light mb-2">mycodecircle302@gmail.com</p>
           <p className="text-sm text-light mb-8">+92 307 3346 890</p>
           <Link href="/contact-us" className="bg-secondary hover:bg-lightMedium px-4 py-3 rounded-full font-semibold text-light mb-4">

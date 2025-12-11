@@ -106,7 +106,7 @@ const ContactUs = () => {
                           <MdOutlinePhoneInTalk className="text-sm sm:text-base" />
                         </p>
                         <p className="hover:text-light cursor-pointer text-sm sm:text-md transition-all duration-300">
-                          +92 310 44 34 436
+                        +1 (647) 883-6143
                         </p>
                       </span>
                     </div>
