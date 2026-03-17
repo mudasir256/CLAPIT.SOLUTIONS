@@ -135,7 +135,7 @@ export const Header = () => {
         className={`fixed top-0 left-0 right-0 px-4   m-4 rounded-2xl z-[1000] transition-all duration-300 container mx-auto ${
           scrolled || isMobileMenuOpen
             ? "bg-white shadow-lg dark:bg-dark"
-            : " bg-white"
+            : "bg-transparent"
         }`}
       >
         <div className="mx-auto ">
