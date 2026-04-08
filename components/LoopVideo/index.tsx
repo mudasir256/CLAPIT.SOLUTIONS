@@ -61,7 +61,7 @@ const LoopVideo: React.FC = () => {
 
   return (
     <div className="px-4 pt-24 pb-4">
-      <div className="container mx-auto relative w-full min-h-[calc(100vh-7rem)] overflow-hidden rounded-tl-[2rem] rounded-bl-[2rem] rounded-br-[2rem] rounded-tr-none">
+      <div className="container mx-auto relative w-full min-h-[calc(100vh-7rem)] overflow-hidden rounded-[2rem]">
         <div className="absolute inset-0 pointer-events-none">
           {SLIDES.map((src: string, index: number) => (
             <NextImage
@@ -136,18 +136,6 @@ const LoopVideo: React.FC = () => {
           </div>
         </div>
 
-        <svg
-          className="absolute top-0 right-0 z-30"
-          width="90"
-          height="65"
-          viewBox="0 0 90 65"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M 12 0 L 90 0 L 90 53 Q 90 65 80 58 L 10 7 Q 0 0 12 0 Z"
-            fill="white"
-          />
-        </svg>
       </div>
     </div>
   );

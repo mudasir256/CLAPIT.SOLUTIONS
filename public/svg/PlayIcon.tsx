@@ -13,7 +13,7 @@ const PlayIcon = ({ className }: Props) => (
     <path
       d="M5 3L19 12L5 21V3Z"
       fill=""
-      stroke="#f84b07"
+      stroke="#DB1A1A"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"

@@ -90,7 +90,7 @@ function IndustryHeader() {
           style={{ opacity: imageOpacity }}
           className="absolute inset-0 w-full h-full"
         >
-          <div className="relative w-full h-[900px] max-w-5xl mx-auto hidden sm:block">
+          <div className="relative w-full h-[780px] max-w-5xl mx-auto hidden sm:block">
             <div className="flex justify-center items-center">
               <motion.div
                 style={{
@@ -98,10 +98,10 @@ function IndustryHeader() {
                   x: image1X,
                   scale: imageScale,
                 }}
-                className="absolute left-4 top-1/3 w-[250px] h-[250px]"
+                className="absolute left-4 top-1/3 w-[220px] h-[220px]"
               >
                 <div 
-                  className="bg-darkMedium rotate-45 text-secondary h-full w-full text-2xl font-semibold flex items-center justify-center pr-5 text-nowrap overflow-hidden relative"
+                  className="bg-darkMedium rotate-45 text-secondary h-full w-full text-xl font-semibold flex items-center justify-center pr-4 text-nowrap overflow-hidden relative"
                 >
                   <div
                     className="absolute inset-0 -rotate-45 w-[150%] h-[150%] -left-1/4 -top-1/4"
@@ -112,7 +112,7 @@ function IndustryHeader() {
                       backgroundRepeat: "no-repeat",
                     }}
                   ></div>
-                  <span className="-rotate-45 relative z-10 text-light font-bold text-2xl">Visionary</span>
+                  <span className="-rotate-45 relative z-10 text-light font-bold text-xl">Visionary</span>
                 </div>
               </motion.div>
               <motion.div
@@ -120,9 +120,9 @@ function IndustryHeader() {
                   y: imageY1,
                   scale: imageScale,
                 }}
-                className="absolute top-1/3 w-[250px] h-[250px]"
+                className="absolute top-1/3 w-[220px] h-[220px]"
               >
-                <div className="bg-medium rotate-45 text-black h-full w-full text-2xl font-semibold flex items-center justify-center text-nowrap relative overflow-hidden">
+                <div className="bg-medium rotate-45 text-black h-full w-full text-xl font-semibold flex items-center justify-center text-nowrap relative overflow-hidden">
                   <div
                     className="absolute inset-0 -rotate-45 w-[150%] h-[150%] -left-1/4 -top-1/4"
                     style={{
@@ -141,9 +141,9 @@ function IndustryHeader() {
                   x: image2X,
                   scale: imageScale,
                 }}
-                className="absolute right-4 top-1/3 w-[250px] h-[250px]"
+                className="absolute right-4 top-1/3 w-[220px] h-[220px]"
               >
-                <div className="bg-darkMedium rotate-45 text-secondary h-full w-full text-2xl font-semibold flex items-center justify-center pl-5 text-nowrap relative overflow-hidden">
+                <div className="bg-darkMedium rotate-45 text-secondary h-full w-full text-xl font-semibold flex items-center justify-center pl-4 text-nowrap relative overflow-hidden">
                   <div
                     className="absolute inset-0 -rotate-45 w-[150%] h-[150%] -left-1/4 -top-1/4"
                     style={{
@@ -153,7 +153,7 @@ function IndustryHeader() {
                       backgroundRepeat: "no-repeat",
                     }}
                   ></div>
-                  <span className="-rotate-45 relative z-10 text-light font-bold text-2xl">Action-oriented</span>
+                  <span className="-rotate-45 relative z-10 text-light font-bold text-xl">Action-oriented</span>
                 </div>
               </motion.div>
             </div>
@@ -164,9 +164,9 @@ function IndustryHeader() {
                 x: image3X,
                 scale: imageScale,
               }}
-              className="absolute left-[20%] bottom-36 w-[250px] h-[250px]"
+              className="absolute left-[20%] bottom-32 w-[220px] h-[220px]"
             >
-              <div className="bg-secondary rotate-45 text-light h-full w-full text-2xl font-semibold  flex items-center justify-center text-nowrap">
+              <div className="bg-secondary rotate-45 text-light h-full w-full text-xl font-semibold flex items-center justify-center text-nowrap">
                 <span className="-rotate-45">Tech-aligned</span>
               </div>
             </motion.div>
@@ -177,22 +177,22 @@ function IndustryHeader() {
                 x: image4X,
                 scale: imageScale,
               }}
-              className="absolute right-[20%] -translate-x-1/2 bottom-36 w-[250px] h-[250px]"
+              className="absolute right-[20%] -translate-x-1/2 bottom-32 w-[220px] h-[220px]"
             >
-              <div className="bg-secondary rotate-45 text-light h-full w-full text-2xl font-semibold flex items-center justify-center text-nowrap">
+              <div className="bg-secondary rotate-45 text-light h-full w-full text-xl font-semibold flex items-center justify-center text-nowrap">
                 <span className="-rotate-45">Value-based</span>
               </div>
             </motion.div>
           </div>
 
           <div className="relative w-full h-full sm:hidden">
-            <div className="flex flex-col items-center justify-center h-full gap-4 px-4">
+            <div className="flex flex-col items-center justify-center h-full gap-3 px-4">
               <motion.div
                 style={{
                   y: block1Y,
                   opacity: block1Opacity,
                 }}
-                className="w-full max-w-[280px] h-[70px] bg-darkMedium rounded-xl overflow-hidden"
+                className="w-full max-w-[260px] h-[64px] bg-darkMedium rounded-xl overflow-hidden"
               >
                 <div className="h-full w-full text-sm font-bold flex items-center justify-center text-secondary px-4 text-center">
                   Building the Future with AI
@@ -204,7 +204,7 @@ function IndustryHeader() {
                   y: block2Y,
                   opacity: block2Opacity,
                 }}
-                className="w-full max-w-[280px] h-[70px] bg-medium rounded-xl overflow-hidden"
+                className="w-full max-w-[260px] h-[64px] bg-medium rounded-xl overflow-hidden"
               >
                 <div className="h-full w-full text-sm font-bold flex items-center justify-center text-black px-4 text-center">
                   Visionary
@@ -216,7 +216,7 @@ function IndustryHeader() {
                   y: block3Y,
                   opacity: block3Opacity,
                 }}
-                className="w-full max-w-[280px] h-[70px] bg-lightMedium rounded-xl overflow-hidden"
+                className="w-full max-w-[260px] h-[64px] bg-lightMedium rounded-xl overflow-hidden"
               >
                 <div className="h-full w-full text-sm font-bold flex items-center justify-center text-light px-4 text-center">
                   Action-oriented
@@ -228,7 +228,7 @@ function IndustryHeader() {
                   y: block4Y,
                   opacity: block4Opacity,
                 }}
-                className="w-full max-w-[280px] h-[70px] bg-lightMedium/80 rounded-xl overflow-hidden"
+                className="w-full max-w-[260px] h-[64px] bg-lightMedium/80 rounded-xl overflow-hidden"
               >
                 <div className="h-full w-full text-sm font-bold flex items-center justify-center text-dark px-4 text-center">
                   Tech-aligned
@@ -240,7 +240,7 @@ function IndustryHeader() {
                   y: block5Y,
                   opacity: block5Opacity,
                 }}
-                className="w-full max-w-[280px] h-[70px] bg-[#feeae6] rounded-xl overflow-hidden"
+                className="w-full max-w-[260px] h-[64px] bg-[#feeae6] rounded-xl overflow-hidden"
               >
                 <div className="h-full w-full text-sm font-bold flex items-center justify-center text-dark px-4 text-center">
                   Value-based

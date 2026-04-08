@@ -30,15 +30,15 @@ export default function GetStarted({ data, bgColor, button }: GetStartedProps) {
 
   const CardContent = ({ icon, title, description }: Industry) => (
     <div className="relative z-10">
-      <div className="flex items-center gap-3 relative z-10 mb-4">
-        <div className="text-dark group-hover:text-white text-4xl lg:text-5xl font-bold w-14 h-14 min-w-[56px] min-h-[56px] flex items-center justify-center rounded-full bg-dark/10 group-hover:bg-dark/20 transition-all duration-300 relative">
-          <span className="relative z-20 block">{icon}</span>
+      <div className="flex items-center gap-2 relative z-10 mb-3">
+        <div className="text-dark group-hover:text-white text-2xl md:text-3xl font-bold w-10 h-10 md:w-11 md:h-11 min-w-[2.5rem] min-h-[2.5rem] md:min-w-[2.75rem] md:min-h-[2.75rem] flex items-center justify-center rounded-full bg-dark/10 group-hover:bg-dark/20 transition-all duration-300 relative">
+          <span className="relative z-20 block leading-none">{icon}</span>
         </div>
       </div>
-      <h3 className="text-xl font-semibold text-dark group-hover:text-white mb-2 relative z-10 transition-colors duration-300">
+      <h3 className="text-base md:text-lg font-semibold text-dark group-hover:text-white mb-1.5 leading-snug relative z-10 transition-colors duration-300">
         {title}
       </h3>
-      <p className="text-dark group-hover:text-white lg:text-lg text-md relative z-10 transition-colors duration-300">
+      <p className="text-dark group-hover:text-white text-sm md:text-base leading-snug relative z-10 transition-colors duration-300">
         {description}
       </p>
     </div>
@@ -78,11 +78,11 @@ export default function GetStarted({ data, bgColor, button }: GetStartedProps) {
           {paragraph}
         </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-12 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 px-12 mt-8 md:mt-10">
           {industries.map(({ icon, title, description, href }, index) => (
             <motion.div
               key={index}
-              className="bg-light p-6 rounded-2xl border border-dark/20 hover:border-primary transition-all duration-300 relative group overflow-hidden"
+              className="bg-light p-4 md:p-5 rounded-xl border border-dark/20 hover:border-primary transition-all duration-300 relative group overflow-hidden"
             >
               <div
                 className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"

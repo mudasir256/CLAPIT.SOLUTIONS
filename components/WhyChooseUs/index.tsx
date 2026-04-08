@@ -76,7 +76,7 @@ export default function WhyChooseUs() {
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute -top-20 sm:-top-40 -right-20 sm:-right-40 w-[100vw] h-[400px] sm:h-[600px] md:h-[800px] rounded-full opacity-10"
               style={{
-                background: `radial-gradient(circle, #f84b07 0%, transparent 70%)`,
+                background: `radial-gradient(circle, #DB1A1A 0%, transparent 70%)`,
               }}
             />
             <div className="absolute -bottom-20 sm:-bottom-40 -left-20 sm:-left-40 w-[100vw] h-[300px] sm:h-[400px] md:h-[600px] rounded-full opacity-10"
@@ -100,7 +100,7 @@ export default function WhyChooseUs() {
             <AnimatedSection1>
                 <span className="text-dark">Why Believe </span>
                 <span className="" style={{
-                  background: `linear-gradient(135deg, #f84b07 0%, #F85C1E 100%)`,
+                  background: `linear-gradient(135deg, #DB1A1A 0%, #F85C1E 100%)`,
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
@@ -164,7 +164,7 @@ export default function WhyChooseUs() {
                 <div className="h-0.5 sm:h-1 w-6 sm:w-8 md:w-10 lg:w-12 bg-gradient-to-r from-secondary to-lightMedium rounded-full flex-shrink-0" />
                 <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-4xl font-black leading-[1.1]"
                   style={{
-                    background: `linear-gradient(135deg, #f84b07 0%, #F85C1E 100%)`,
+                    background: `linear-gradient(135deg, #DB1A1A 0%, #F85C1E 100%)`,
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
@@ -190,7 +190,7 @@ export default function WhyChooseUs() {
                 <button key={platform}
                   className="group px-2.5 sm:px-3 md:px-4 lg:px-6 py-1.5 sm:py-2 md:py-3 bg-dark text-primary font-bold text-[10px] sm:text-xs md:text-sm lg:text-base rounded-full relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl flex-shrink"
                   style={{
-                    boxShadow: `0 4px 20px rgba(248, 75, 7, 0.2)`,
+                    boxShadow: `0 4px 20px rgba(219, 26, 26, 0.2)`,
                   }}
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-secondary to-lightMedium opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -215,12 +215,12 @@ export default function WhyChooseUs() {
               <div key={idx} className="group">
                 <div className="bg-primary rounded-lg sm:rounded-xl md:rounded-2xl lg:rounded-3xl p-2 sm:p-2.5 md:p-3 lg:p-4 xl:p-5 transition-all duration-300 hover:shadow-2xl relative overflow-hidden w-full"
                   style={{
-                    border: `2px solid ${idx === 0 ? '#f84b07' : idx === 1 ? '#F85C1E' : '#9B9FA6'}`,
+                    border: `2px solid ${idx === 0 ? '#DB1A1A' : idx === 1 ? '#F85C1E' : '#9B9FA6'}`,
                   }}
                 >
                   <div className="absolute top-2 sm:top-2.5 md:top-3 lg:top-4 right-2 sm:right-2.5 md:right-3 lg:right-4 w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 rounded-full flex items-center justify-center font-black text-xs sm:text-sm md:text-lg lg:text-2xl text-primary"
                     style={{
-                      background: `linear-gradient(135deg, ${idx === 0 ? '#f84b07' : idx === 1 ? '#F85C1E' : '#54565A'} 0%, ${idx === 0 ? '#F85C1E' : idx === 1 ? '#f84b07' : '#9B9FA6'} 100%)`,
+                      background: `linear-gradient(135deg, ${idx === 0 ? '#DB1A1A' : idx === 1 ? '#F85C1E' : '#54565A'} 0%, ${idx === 0 ? '#F85C1E' : idx === 1 ? '#DB1A1A' : '#9B9FA6'} 100%)`,
                     }}
                   >
                     {item.percent}
@@ -258,7 +258,7 @@ export default function WhyChooseUs() {
         >
           <div className="absolute inset-0 opacity-[0.02] pointer-events-none"
             style={{
-              backgroundImage: `linear-gradient(#f84b07 1px, transparent 1px), linear-gradient(90deg, #f84b07 1px, transparent 1px)`,
+              backgroundImage: `linear-gradient(#DB1A1A 1px, transparent 1px), linear-gradient(90deg, #DB1A1A 1px, transparent 1px)`,
               backgroundSize: "80px 80px",
             }}
           />
@@ -294,7 +294,7 @@ export default function WhyChooseUs() {
                     <div className="pr-0 sm:pr-2 md:pr-3">
                       <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-4xl font-black mb-0.5 sm:mb-1 md:mb-1.5 lg:mb-2 leading-tight"
                         style={{
-                          background: `linear-gradient(135deg, #f84b07 0%, #F85C1E 100%)`,
+                          background: `linear-gradient(135deg, #DB1A1A 0%, #F85C1E 100%)`,
                           WebkitBackgroundClip: "text",
                           WebkitTextFillColor: "transparent",
                           backgroundClip: "text",
@@ -367,20 +367,20 @@ export default function WhyChooseUs() {
               <div className="relative bg-dark px-4 sm:px-6 md:px-8 lg:px-10 py-3 sm:py-4 md:py-5 font-black text-sm sm:text-base md:text-lg lg:text-base xl:text-lg uppercase tracking-wider text-center"
                 style={{
                   clipPath: "polygon(0 0, 100% 0, 95% 100%, 5% 100%)",
-                  color: "#f84b07",
+                  color: "#DB1A1A",
                 }}
               >
               Ready to get started?
               </div>
             </div>
 
-            <div className="text-center space-y-1.5 sm:space-y-2 md:space-y-2.5 lg:space-y-1.5 w-full">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-5xl font-black leading-[1] text-light">
+            <div className="text-center space-y-1 sm:space-y-1.5 md:space-y-2 lg:space-y-1 w-full">
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-4xl font-black leading-[1] text-light">
                 Let&apos;s build something
               </h1>
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl 2xl:text-5xl font-black leading-[1]"
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl 2xl:text-4xl font-black leading-[1]"
                 style={{
-                  background: `linear-gradient(135deg, #f84b07 0%, #F85C1E 50%, #f84b07 100%)`,
+                  background: `linear-gradient(135deg, #DB1A1A 0%, #F85C1E 50%, #DB1A1A 100%)`,
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
@@ -390,12 +390,8 @@ export default function WhyChooseUs() {
             </h1>
             </div>
 
-            <div className="w-full max-w-2xl mx-auto space-y-3 sm:space-y-4 md:space-y-4">
-              <p className="text-sm sm:text-base md:text-lg lg:text-base xl:text-lg text-medium text-center leading-relaxed px-4">
-                Partner with us to create digital solutions that stand out. Our team combines technical mastery with creative excellence to deliver products that make a lasting impact.
-              </p>
-
-              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-2 sm:gap-2.5 md:gap-3 lg:gap-4 mt-3 sm:mt-4">
+            <div className="w-full max-w-xl mx-auto space-y-2 sm:space-y-3 md:space-y-3">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-1.5 sm:gap-2 md:gap-2.5 lg:gap-3">
                 {[
                   { icon: "⚡", label: "Quick Turnaround", desc: "24-48h response" },
                   { icon: "💬", label: "Expert Consultation", desc: "No obligations" },
@@ -404,12 +400,12 @@ export default function WhyChooseUs() {
                 ].map((item, index) => (
                   <motion.div
                     key={index}
-                    className="bg-dark/40 backdrop-blur-sm rounded-lg sm:rounded-xl md:rounded-2xl p-2 sm:p-3 md:p-4 lg:p-5 text-center border border-secondary/20 hover:border-secondary/40 transition-all duration-300"
-                    whileHover={{ scale: 1.05, y: -4 }}
+                    className="bg-dark/40 backdrop-blur-sm rounded-md sm:rounded-lg md:rounded-xl p-1.5 sm:p-2 md:p-2.5 lg:p-3 text-center border border-secondary/20 hover:border-secondary/40 transition-all duration-300"
+                    whileHover={{ scale: 1.03, y: -2 }}
                   >
-                    <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-1 sm:mb-2">{item.icon}</div>
-                    <h3 className="text-[10px] sm:text-xs md:text-sm lg:text-base font-bold text-primary mb-0.5 sm:mb-1">{item.label}</h3>
-                    <p className="text-[9px] sm:text-[10px] md:text-xs text-medium leading-tight">{item.desc}</p>
+                    <div className="text-base sm:text-lg md:text-xl lg:text-2xl mb-0.5 sm:mb-1">{item.icon}</div>
+                    <h3 className="text-[9px] sm:text-[10px] md:text-xs lg:text-sm font-bold text-primary mb-0.5">{item.label}</h3>
+                    <p className="text-[8px] sm:text-[9px] md:text-[10px] text-medium leading-tight">{item.desc}</p>
                   </motion.div>
                 ))}
               </div>
@@ -422,23 +418,23 @@ export default function WhyChooseUs() {
               animate={{ x: position.x, y: position.y }}
               transition={{ type: "spring", stiffness: 100, damping: 10 }}
             >
-              <div className="absolute -inset-4 sm:-inset-6 md:-inset-8 lg:-inset-12 bg-gradient-to-r from-secondary/40 to-lightMedium/40 rounded-full blur-xl sm:blur-2xl md:blur-3xl animate-pulse" />
+              <div className="absolute -inset-3 sm:-inset-4 md:-inset-6 lg:-inset-8 bg-gradient-to-r from-secondary/40 to-lightMedium/40 rounded-full blur-lg sm:blur-xl md:blur-2xl animate-pulse" />
               
               <Link href="/contact-us">
-                <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 flex flex-col items-center justify-center gap-1 sm:gap-2 md:gap-3 lg:gap-4 rounded-full cursor-pointer group"
+                <div className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-48 lg:h-48 flex flex-col items-center justify-center gap-0.5 sm:gap-1.5 md:gap-2 lg:gap-3 rounded-full cursor-pointer group"
                   style={{
-                    background: `linear-gradient(135deg, #f84b07 0%, #F85C1E 100%)`,
-                    boxShadow: "0 20px 60px rgba(248, 75, 7, 0.4)",
+                    background: `linear-gradient(135deg, #DB1A1A 0%, #F85C1E 100%)`,
+                    boxShadow: "0 14px 42px rgba(219, 26, 26, 0.35)",
                   }}
                 >
-                  <div className="absolute inset-2 sm:inset-3 md:inset-4 rounded-full bg-dark/20 group-hover:bg-dark/0 transition-all duration-300" />
+                  <div className="absolute inset-1.5 sm:inset-2 md:inset-3 rounded-full bg-dark/20 group-hover:bg-dark/0 transition-all duration-300" />
                   
-                  <span className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-black text-primary relative z-10 text-center px-1 sm:px-2 md:px-4 group-hover:scale-110 transition-transform">
+                  <span className="text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg font-black text-primary relative z-10 text-center px-1 sm:px-1.5 md:px-3 group-hover:scale-110 transition-transform leading-tight">
                     Get<br/>in Touch
                   </span>
-                  <RightLongArrowIcon className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 lg:h-8 lg:w-8 xl:h-10 xl:w-10 2xl:h-12 2xl:w-12 text-primary relative z-10 group-hover:translate-x-2 transition-transform" />
+                  <RightLongArrowIcon className="h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5 lg:h-6 lg:w-6 xl:h-7 xl:w-7 2xl:h-8 2xl:w-8 text-primary relative z-10 group-hover:translate-x-2 transition-transform" />
                   
-                  <div className="absolute inset-0 rounded-full border-2 sm:border-3 md:border-4 border-dashed border-primary/30 animate-spin" style={{ animationDuration: "10s" }} />
+                  <div className="absolute inset-0 rounded-full border-2 sm:border-2 md:border-[3px] border-dashed border-primary/30 animate-spin" style={{ animationDuration: "10s" }} />
                 </div>
               </Link>
             </motion.div>

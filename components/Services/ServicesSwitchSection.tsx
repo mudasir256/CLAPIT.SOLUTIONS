@@ -95,12 +95,12 @@ export default function ServicesSection({
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3">
                 <span className="text-dark">
                 All the strength your product
                 </span>
                 <br />
-                <span className="bg-gradient-to-r from-secondary via-secondary/80 to-secondary bg-clip-text text-transparent text-2xl md:text-3xl lg:text-4xl">
+                <span className="bg-gradient-to-r from-secondary via-secondary/80 to-secondary bg-clip-text text-transparent text-xl md:text-2xl lg:text-3xl">
                 needs to grow
               </span>
             </h2>
@@ -155,7 +155,7 @@ export default function ServicesSection({
             className="relative"
           >
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 py-20"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 lg:gap-6 py-12 md:py-16"
               style={{ perspective: 1200 }}
               variants={containerVariants}
               initial="hidden"
@@ -232,9 +232,9 @@ function CardWrapper({
         href={service.href}
         className="block relative h-full"
       >
-        <div className="relative h-full rounded-2xl overflow-hidden">
+        <div className="relative h-full rounded-xl overflow-hidden">
           <motion.div 
-            className="relative h-full p-8 rounded-2xl bg-white/80 border border-gray-200 backdrop-blur-sm"
+            className="relative h-full p-5 md:p-6 rounded-xl bg-white/80 border border-gray-200 backdrop-blur-sm"
             animate={{
               borderColor: isHovered ? "rgba(250, 158, 137, 0.5)" : "rgba(0, 0, 0, 0.1)",
               boxShadow: isHovered 
@@ -244,7 +244,7 @@ function CardWrapper({
             transition={{ duration: 0.3 }}
           >
             <motion.div
-              className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100"
+              className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100"
               initial={{ opacity: 0 }}
               animate={{ opacity: isHovered ? 1 : 0 }}
               transition={{ duration: 0.4 }}
@@ -263,10 +263,10 @@ function CardWrapper({
               transition={{ duration: 0.5, ease: "easeOut" }}
             />
 
-            <div className="relative z-10 flex flex-col gap-6 h-full">
+            <div className="relative z-10 flex flex-col gap-4 h-full">
               <div className="relative">
                 <motion.div
-                  className="relative w-16 h-16  rounded-xl bg-dark border border-gray-300 flex items-center justify-center text-2xl text-light backdrop-blur-sm"
+                  className="relative w-12 h-12 md:w-14 md:h-14 rounded-lg bg-dark border border-gray-300 flex items-center justify-center text-lg md:text-xl text-light backdrop-blur-sm [&_svg]:w-5 [&_svg]:h-5 md:[&_svg]:w-6 md:[&_svg]:h-6"
                   animate={{
                     backgroundColor: isHovered 
                       ? "rgba(250, 158, 137, 0.2)" 
@@ -289,9 +289,9 @@ function CardWrapper({
                 </motion.div>
               </div>
 
-              <div className="space-y-4 flex-grow">
+              <div className="space-y-2 flex-grow">
                 <motion.h3
-                  className="text-xl lg:text-2xl font-bold text-dark relative"
+                  className="text-base md:text-lg lg:text-xl font-bold text-dark leading-snug relative"
                   animate={{
                     color: isHovered ? "rgb(250, 158, 137)" : "rgb(17, 24, 39)",
                   }}
@@ -302,7 +302,7 @@ function CardWrapper({
                   {service.title}
                 </motion.h3>
                 <motion.p
-                  className="text-base lg:text-lg text-gray-600 leading-relaxed"
+                  className="text-sm md:text-base text-gray-600 leading-snug"
                   animate={{
                     color: isHovered ? "rgba(17, 24, 39, 0.9)" : "rgba(75, 85, 99, 0.8)",
                   }}
@@ -322,7 +322,7 @@ function CardWrapper({
                 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
               >
-                <span className="text-sm font-semibold text-secondary">
+                <span className="text-xs font-semibold text-secondary">
                   Explore →
                 </span>
               </motion.div>

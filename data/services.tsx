@@ -306,11 +306,11 @@ export const services: Service[] = [
           title: "Design & Visualization Platforms",
           icon: <FigmaIcon />,
           technologies: [
-            { name: "Figma", icon: <FigmaIcon color={"#f84b07"} /> },
-            { name: "Adobe Illustrator", icon: <AdobeIllustratorIcon color={"#f84b07"} /> },
-            { name: "Photoshop", icon: <AdobePhotoshopIcon color={"#f84b07"} /> },
-            { name: "Canva", icon: <CanvaIcon color={"#f84b07"} /> },
-            { name: "Zeplin", icon: <ZeplinIcon color={"#f84b07"} /> },
+            { name: "Figma", icon: <FigmaIcon color={"#DB1A1A"} /> },
+            { name: "Adobe Illustrator", icon: <AdobeIllustratorIcon color={"#DB1A1A"} /> },
+            { name: "Photoshop", icon: <AdobePhotoshopIcon color={"#DB1A1A"} /> },
+            { name: "Canva", icon: <CanvaIcon color={"#DB1A1A"} /> },
+            { name: "Zeplin", icon: <ZeplinIcon color={"#DB1A1A"} /> },
           ],
         },
         {
@@ -318,11 +318,11 @@ export const services: Service[] = [
           title: "Marketing Automation & CRM Systems",
           icon: <HubSpotIcon />,
           technologies: [
-            { name: "HubSpot", icon: <HubSpotIcon color={"#f84b07"} /> },
-            { name: "Mailchimp", icon: <MailchimpIcon color={"#f84b07"} /> },
-            { name: "ActiveCampaign", icon: <ActiveIcon color={"#f84b07"} /> },
-            { name: "Klaviyo", icon: <KlaviyoIcon color={"#f84b07"} /> },
-            { name: "Zapier", icon: <ZapierIcon color={"#f84b07"} /> },
+            { name: "HubSpot", icon: <HubSpotIcon color={"#DB1A1A"} /> },
+            { name: "Mailchimp", icon: <MailchimpIcon color={"#DB1A1A"} /> },
+            { name: "ActiveCampaign", icon: <ActiveIcon color={"#DB1A1A"} /> },
+            { name: "Klaviyo", icon: <KlaviyoIcon color={"#DB1A1A"} /> },
+            { name: "Zapier", icon: <ZapierIcon color={"#DB1A1A"} /> },
           ],
         },
         {
@@ -330,12 +330,12 @@ export const services: Service[] = [
           title: "Analytics, Search Optimization & Advertising",
           icon: <GoogleAnalyticsIcon />,
           technologies: [
-            { name: "Google Analytics", icon: <GoogleAnalyticsIcon color={"#f84b07"} /> },
-            { name: "SEMrush", icon: <SemrushIcon color={"#f84b07"} /> },
-            { name: "Ahrefs", icon: <AhrefsIcon color={"#f84b07"} /> },
-            { name: "Hotjar", icon: <HotjarIcon color={"#f84b07"} /> },
-            { name: "Google Ads", icon: <GoogleAdsIcon color={"#f84b07"} /> },
-            { name: "Meta Ads", icon: <MetaAdsIcon color={"#f84b07"} /> },
+            { name: "Google Analytics", icon: <GoogleAnalyticsIcon color={"#DB1A1A"} /> },
+            { name: "SEMrush", icon: <SemrushIcon color={"#DB1A1A"} /> },
+            { name: "Ahrefs", icon: <AhrefsIcon color={"#DB1A1A"} /> },
+            { name: "Hotjar", icon: <HotjarIcon color={"#DB1A1A"} /> },
+            { name: "Google Ads", icon: <GoogleAdsIcon color={"#DB1A1A"} /> },
+            { name: "Meta Ads", icon: <MetaAdsIcon color={"#DB1A1A"} /> },
           ],
         },
         {
@@ -343,9 +343,9 @@ export const services: Service[] = [
           title: "AI-Powered Brand Development",
           icon: <OpenAIIcon />,
           technologies: [
-            { name: "OpenAI", icon: <OpenAIIcon color={"#f84b07"} /> },
-            { name: "Hugging Face", icon: <HuggingFaceIcon color={"#f84b07"} /> },
-            { name: "Scikit-learn", icon: <ScikitLearnIcon color={"#f84b07"} /> },
+            { name: "OpenAI", icon: <OpenAIIcon color={"#DB1A1A"} /> },
+            { name: "Hugging Face", icon: <HuggingFaceIcon color={"#DB1A1A"} /> },
+            { name: "Scikit-learn", icon: <ScikitLearnIcon color={"#DB1A1A"} /> },
           ],
         },
         {
@@ -353,9 +353,9 @@ export const services: Service[] = [
           title: "Campaign Implementation Platforms",
           icon: <WebflowIcon />,
           technologies: [
-            { name: "Webflow", icon: <WebflowIcon color={"#f84b07"} /> },
-            { name: "ClickFunnels", icon: <ClickFunnelsIcon color={"#f84b07"} /> },
-            { name: "Notion", icon: <NotionIcon color={"#f84b07"} /> },
+            { name: "Webflow", icon: <WebflowIcon color={"#DB1A1A"} /> },
+            { name: "ClickFunnels", icon: <ClickFunnelsIcon color={"#DB1A1A"} /> },
+            { name: "Notion", icon: <NotionIcon color={"#DB1A1A"} /> },
           ],
         },
         {
@@ -363,10 +363,10 @@ export const services: Service[] = [
           title: "Content Management & Collaboration",
           icon: <NotionIcon />,
           technologies: [
-            { name: "Notion", icon: <NotionIcon color={"#f84b07"} /> },
-            { name: "Google Workspace", icon: <GoogleAnalyticsIcon color={"#f84b07"} /> },
-            { name: "Slack", icon: <ZapierIcon color={"#f84b07"} /> },
-            { name: "Asana", icon: <HubSpotIcon color={"#f84b07"} /> },
+            { name: "Notion", icon: <NotionIcon color={"#DB1A1A"} /> },
+            { name: "Google Workspace", icon: <GoogleAnalyticsIcon color={"#DB1A1A"} /> },
+            { name: "Slack", icon: <ZapierIcon color={"#DB1A1A"} /> },
+            { name: "Asana", icon: <HubSpotIcon color={"#DB1A1A"} /> },
           ],
         },
       ],
@@ -533,10 +533,10 @@ export const services: Service[] = [
           title: "Creative & Design Solutions",
           icon: <FigmaIcon />,
           technologies: [
-            { name: "Figma", icon: <FigmaIcon color={"#f84b07"} /> },
-            { name: "Canva", icon: <CanvaIcon color={"#f84b07"} /> },
-            { name: "Adobe Illustrator", icon: <AdobeIllustratorIcon color={"#f84b07"} /> },
-            { name: "Adobe Photoshop", icon: <AdobePhotoshopIcon color={"#f84b07"} /> },
+            { name: "Figma", icon: <FigmaIcon color={"#DB1A1A"} /> },
+            { name: "Canva", icon: <CanvaIcon color={"#DB1A1A"} /> },
+            { name: "Adobe Illustrator", icon: <AdobeIllustratorIcon color={"#DB1A1A"} /> },
+            { name: "Adobe Photoshop", icon: <AdobePhotoshopIcon color={"#DB1A1A"} /> },
           ],
         },
         {
@@ -544,10 +544,10 @@ export const services: Service[] = [
           title: "Scheduling & Engagement Platforms",
           icon: <ZapierIcon />,
           technologies: [
-            { name: "Buffer", icon: <ZapierIcon color={"#f84b07"} /> },
-            { name: "Hootsuite", icon: <HootsuiteIcon color={"#f84b07"} /> },
-            { name: "Later", icon: <SproutSocialIcon color={"#f84b07"} /> },
-            { name: "Sprout Social", icon: <SproutSocialIcon color={"#f84b07"} /> },
+            { name: "Buffer", icon: <ZapierIcon color={"#DB1A1A"} /> },
+            { name: "Hootsuite", icon: <HootsuiteIcon color={"#DB1A1A"} /> },
+            { name: "Later", icon: <SproutSocialIcon color={"#DB1A1A"} /> },
+            { name: "Sprout Social", icon: <SproutSocialIcon color={"#DB1A1A"} /> },
           ],
         },
         {
@@ -555,10 +555,10 @@ export const services: Service[] = [
           title: "Analytics & Social Advertising",
           icon: <GoogleAnalyticsIcon />,
           technologies: [
-            { name: "Google Analytics", icon: <GoogleAnalyticsIcon color={"#f84b07"} /> },
-            { name: "Meta Ads", icon: <MetaAdsIcon color={"#f84b07"} /> },
-            { name: "LinkedIn Ads", icon: <LinkedInAdsIcon color={"#f84b07"} /> },
-            { name: "TikTok Ads", icon: <TikTokAdsIcon color={"#f84b07"} /> },
+            { name: "Google Analytics", icon: <GoogleAnalyticsIcon color={"#DB1A1A"} /> },
+            { name: "Meta Ads", icon: <MetaAdsIcon color={"#DB1A1A"} /> },
+            { name: "LinkedIn Ads", icon: <LinkedInAdsIcon color={"#DB1A1A"} /> },
+            { name: "TikTok Ads", icon: <TikTokAdsIcon color={"#DB1A1A"} /> },
           ],
         },
         {
@@ -566,9 +566,9 @@ export const services: Service[] = [
           title: "AI Content & Copy Solutions",
           icon: <OpenAIIcon />,
           technologies: [
-            { name: "OpenAI", icon: <OpenAIIcon color={"#f84b07"} /> },
-            { name: "Scikit-learn", icon: <ScikitLearnIcon color={"#f84b07"} /> },
-            { name: "Hugging Face", icon: <HuggingFaceIcon color={"#f84b07"} /> },
+            { name: "OpenAI", icon: <OpenAIIcon color={"#DB1A1A"} /> },
+            { name: "Scikit-learn", icon: <ScikitLearnIcon color={"#DB1A1A"} /> },
+            { name: "Hugging Face", icon: <HuggingFaceIcon color={"#DB1A1A"} /> },
           ],
         },
         {
@@ -576,10 +576,10 @@ export const services: Service[] = [
           title: "Video & Media Production Tools",
           icon: <FigmaIcon />,
           technologies: [
-            { name: "Adobe Premiere", icon: <AdobePhotoshopIcon color={"#f84b07"} /> },
-            { name: "Canva Video", icon: <CanvaIcon color={"#f84b07"} /> },
-            { name: "Loom", icon: <FigmaIcon color={"#f84b07"} /> },
-            { name: "Animoto", icon: <AdobeIllustratorIcon color={"#f84b07"} /> },
+            { name: "Adobe Premiere", icon: <AdobePhotoshopIcon color={"#DB1A1A"} /> },
+            { name: "Canva Video", icon: <CanvaIcon color={"#DB1A1A"} /> },
+            { name: "Loom", icon: <FigmaIcon color={"#DB1A1A"} /> },
+            { name: "Animoto", icon: <AdobeIllustratorIcon color={"#DB1A1A"} /> },
           ],
         },
         {
@@ -587,9 +587,9 @@ export const services: Service[] = [
           title: "Community Management & Engagement",
           icon: <ZapierIcon />,
           technologies: [
-            { name: "Discord", icon: <ZapierIcon color={"#f84b07"} /> },
-            { name: "Telegram", icon: <SproutSocialIcon color={"#f84b07"} /> },
-            { name: "Community Platforms", icon: <HootsuiteIcon color={"#f84b07"} /> },
+            { name: "Discord", icon: <ZapierIcon color={"#DB1A1A"} /> },
+            { name: "Telegram", icon: <SproutSocialIcon color={"#DB1A1A"} /> },
+            { name: "Community Platforms", icon: <HootsuiteIcon color={"#DB1A1A"} /> },
           ],
         },
       ],
@@ -780,10 +780,10 @@ export const services: Service[] = [
           title: "Media Outreach & Monitoring",
           icon: <MeltwaterIcon />,
           technologies: [
-            { name: "Meltwater", icon: <MeltwaterIcon color={"#f84b07"} /> },
-            { name: "Brandwatch", icon: <BrandwatchIcon color={"#f84b07"} /> },
-            { name: "Cision", icon: <CisionIcon color={"#f84b07"} /> },
-            { name: "BuzzSumo", icon: <BuzzSumoIcon color={"#f84b07"} /> },
+            { name: "Meltwater", icon: <MeltwaterIcon color={"#DB1A1A"} /> },
+            { name: "Brandwatch", icon: <BrandwatchIcon color={"#DB1A1A"} /> },
+            { name: "Cision", icon: <CisionIcon color={"#DB1A1A"} /> },
+            { name: "BuzzSumo", icon: <BuzzSumoIcon color={"#DB1A1A"} /> },
           ],
         },
         {
@@ -791,9 +791,9 @@ export const services: Service[] = [
           title: "Influencer Platforms",
           icon: <HeepsyIcon />,
           technologies: [
-            { name: "Upfluence", icon: <UpfluenceIcon color={"#f84b07"} /> },
-            { name: "Heepsy", icon: <HeepsyIcon color={"#f84b07"} /> },
-            { name: "CreatorIQ", icon: <CreatorIQIcon color={"#f84b07"} /> },
+            { name: "Upfluence", icon: <UpfluenceIcon color={"#DB1A1A"} /> },
+            { name: "Heepsy", icon: <HeepsyIcon color={"#DB1A1A"} /> },
+            { name: "CreatorIQ", icon: <CreatorIQIcon color={"#DB1A1A"} /> },
           ],
         },
         {
@@ -801,9 +801,9 @@ export const services: Service[] = [
           title: "Campaign Analytics",
           icon: <GoogleAnalyticsIcon />,
           technologies: [
-            { name: "Google Analytics", icon: <GoogleAnalyticsIcon color={"#f84b07"} /> },
-            { name: "Sprout Social", icon: <SproutSocialIcon color={"#f84b07"} /> },
-            { name: "Hootsuite", icon: <HootsuiteIcon color={"#f84b07"} /> },
+            { name: "Google Analytics", icon: <GoogleAnalyticsIcon color={"#DB1A1A"} /> },
+            { name: "Sprout Social", icon: <SproutSocialIcon color={"#DB1A1A"} /> },
+            { name: "Hootsuite", icon: <HootsuiteIcon color={"#DB1A1A"} /> },
           ],
         },
         {
@@ -811,9 +811,9 @@ export const services: Service[] = [
           title: "Content Creation & Design Tools",
           icon: <FigmaIcon />,
           technologies: [
-            { name: "Figma", icon: <FigmaIcon color={"#f84b07"} /> },
-            { name: "Canva", icon: <CanvaIcon color={"#f84b07"} /> },
-            { name: "Adobe Creative Suite", icon: <AdobeIllustratorIcon color={"#f84b07"} /> },
+            { name: "Figma", icon: <FigmaIcon color={"#DB1A1A"} /> },
+            { name: "Canva", icon: <CanvaIcon color={"#DB1A1A"} /> },
+            { name: "Adobe Creative Suite", icon: <AdobeIllustratorIcon color={"#DB1A1A"} /> },
           ],
         },
         {
@@ -821,9 +821,9 @@ export const services: Service[] = [
           title: "Email & Communication Platforms",
           icon: <MailchimpIcon />,
           technologies: [
-            { name: "Mailchimp", icon: <MailchimpIcon color={"#f84b07"} /> },
-            { name: "SendGrid", icon: <ActiveIcon color={"#f84b07"} /> },
-            { name: "Constant Contact", icon: <KlaviyoIcon color={"#f84b07"} /> },
+            { name: "Mailchimp", icon: <MailchimpIcon color={"#DB1A1A"} /> },
+            { name: "SendGrid", icon: <ActiveIcon color={"#DB1A1A"} /> },
+            { name: "Constant Contact", icon: <KlaviyoIcon color={"#DB1A1A"} /> },
           ],
         },
         {
@@ -831,9 +831,9 @@ export const services: Service[] = [
           title: "Social Listening & Sentiment Analysis",
           icon: <BrandwatchIcon />,
           technologies: [
-            { name: "Brandwatch", icon: <BrandwatchIcon color={"#f84b07"} /> },
-            { name: "Mention", icon: <MeltwaterIcon color={"#f84b07"} /> },
-            { name: "Talkwalker", icon: <CisionIcon color={"#f84b07"} /> },
+            { name: "Brandwatch", icon: <BrandwatchIcon color={"#DB1A1A"} /> },
+            { name: "Mention", icon: <MeltwaterIcon color={"#DB1A1A"} /> },
+            { name: "Talkwalker", icon: <CisionIcon color={"#DB1A1A"} /> },
           ],
         },
       ],
@@ -1011,10 +1011,10 @@ export const services: Service[] = [
           title: "Advertising Channels",
           icon: <FaBullhorn className="text-dark" />,
           technologies: [
-            { name: "Google Ads", icon: <GoogleAdsIcon color="#f84b07" /> },
-            { name: "Meta Ads", icon: <MetaAdsIcon color="#f84b07" /> },
-            { name: "TikTok Ads", icon: <TikTokAdsIcon color="#f84b07" /> },
-            { name: "LinkedIn Ads", icon: <LinkedInAdsIcon color="#f84b07" /> },
+            { name: "Google Ads", icon: <GoogleAdsIcon color="#DB1A1A" /> },
+            { name: "Meta Ads", icon: <MetaAdsIcon color="#DB1A1A" /> },
+            { name: "TikTok Ads", icon: <TikTokAdsIcon color="#DB1A1A" /> },
+            { name: "LinkedIn Ads", icon: <LinkedInAdsIcon color="#DB1A1A" /> },
           ],
         },
         {
@@ -1022,9 +1022,9 @@ export const services: Service[] = [
           title: "Analytics & Reporting",
           icon: <FaChartBar className="text-mediumDark" />,
           technologies: [
-            { name: "Google Analytics", icon: <GoogleAnalyticsIcon color="#f84b07" /> },
-            { name: "Hotjar", icon: <HotjarIcon color="#f84b07" /> },
-            { name: "Mixpanel", icon: <MixpanelIcon color="#f84b07" /> },
+            { name: "Google Analytics", icon: <GoogleAnalyticsIcon color="#DB1A1A" /> },
+            { name: "Hotjar", icon: <HotjarIcon color="#DB1A1A" /> },
+            { name: "Mixpanel", icon: <MixpanelIcon color="#DB1A1A" /> },
           ],
         },
         {
@@ -1032,9 +1032,9 @@ export const services: Service[] = [
           title: "Automation & CRM",
           icon: <FaCogs className="text-dark" />,
           technologies: [
-            { name: "Klaviyo", icon: <KlaviyoIcon color="#f84b07" /> },
-            { name: "ActiveCampaign", icon: <ActiveIcon color="#f84b07" /> },
-            { name: "Zapier", icon: <ZapierIcon color="#f84b07" /> },
+            { name: "Klaviyo", icon: <KlaviyoIcon color="#DB1A1A" /> },
+            { name: "ActiveCampaign", icon: <ActiveIcon color="#DB1A1A" /> },
+            { name: "Zapier", icon: <ZapierIcon color="#DB1A1A" /> },
           ],
         },
         {
@@ -1042,9 +1042,9 @@ export const services: Service[] = [
           title: "Landing Page & Conversion Tools",
           icon: <WebflowIcon />,
           technologies: [
-            { name: "Unbounce", icon: <WebflowIcon color="#f84b07" /> },
-            { name: "Leadpages", icon: <ClickFunnelsIcon color="#f84b07" /> },
-            { name: "Instapage", icon: <NotionIcon color="#f84b07" /> },
+            { name: "Unbounce", icon: <WebflowIcon color="#DB1A1A" /> },
+            { name: "Leadpages", icon: <ClickFunnelsIcon color="#DB1A1A" /> },
+            { name: "Instapage", icon: <NotionIcon color="#DB1A1A" /> },
           ],
         },
         {
@@ -1052,9 +1052,9 @@ export const services: Service[] = [
           title: "A/B Testing & Optimization",
           icon: <FaFlask className="text-dark" />,
           technologies: [
-            { name: "Optimizely", icon: <GoogleAnalyticsIcon color="#f84b07" /> },
-            { name: "VWO", icon: <HotjarIcon color="#f84b07" /> },
-            { name: "Google Optimize", icon: <MixpanelIcon color="#f84b07" /> },
+            { name: "Optimizely", icon: <GoogleAnalyticsIcon color="#DB1A1A" /> },
+            { name: "VWO", icon: <HotjarIcon color="#DB1A1A" /> },
+            { name: "Google Optimize", icon: <MixpanelIcon color="#DB1A1A" /> },
           ],
         },
         {
@@ -1062,9 +1062,9 @@ export const services: Service[] = [
           title: "Customer Data Platforms",
           icon: <HubSpotIcon />,
           technologies: [
-            { name: "Segment", icon: <HubSpotIcon color="#f84b07" /> },
-            { name: "Tealium", icon: <KlaviyoIcon color="#f84b07" /> },
-            { name: "mParticle", icon: <ActiveIcon color="#f84b07" /> },
+            { name: "Segment", icon: <HubSpotIcon color="#DB1A1A" /> },
+            { name: "Tealium", icon: <KlaviyoIcon color="#DB1A1A" /> },
+            { name: "mParticle", icon: <ActiveIcon color="#DB1A1A" /> },
           ],
         },
       ],
@@ -1242,9 +1242,9 @@ export const services: Service[] = [
           title: "Planning & Implementation",
           icon: <FaClipboardCheck className="text-dark" />,
           technologies: [
-            { name: "Notion", icon: <NotionIcon color="#f84b07" /> },
-            { name: "ClickFunnels", icon: <ClickFunnelsIcon color="#f84b07" /> },
-            { name: "Webflow", icon: <WebflowIcon color="#f84b07" /> },
+            { name: "Notion", icon: <NotionIcon color="#DB1A1A" /> },
+            { name: "ClickFunnels", icon: <ClickFunnelsIcon color="#DB1A1A" /> },
+            { name: "Webflow", icon: <WebflowIcon color="#DB1A1A" /> },
           ],
         },
         {
@@ -1252,9 +1252,9 @@ export const services: Service[] = [
           title: "CRM & Email Funnels",
           icon: <FaMailchimp className="text-dark" />,
           technologies: [
-            { name: "Klaviyo", icon: <KlaviyoIcon color="#f84b07" /> },
-            { name: "ActiveCampaign", icon: <ActiveIcon color="#f84b07" /> },
-            { name: "HubSpot", icon: <HubSpotIcon color="#f84b07" /> },
+            { name: "Klaviyo", icon: <KlaviyoIcon color="#DB1A1A" /> },
+            { name: "ActiveCampaign", icon: <ActiveIcon color="#DB1A1A" /> },
+            { name: "HubSpot", icon: <HubSpotIcon color="#DB1A1A" /> },
           ],
         },
         {
@@ -1262,9 +1262,9 @@ export const services: Service[] = [
           title: "Analytics & Testing",
           icon: <FaChartLine className="text-dark" />,
           technologies: [
-            { name: "Google Analytics", icon: <GoogleAnalyticsIcon color="#f84b07" /> },
-            { name: "Hotjar", icon: <HotjarIcon color="#f84b07" /> },
-            { name: "Mixpanel", icon: <MixpanelIcon color="#f84b07" /> },
+            { name: "Google Analytics", icon: <GoogleAnalyticsIcon color="#DB1A1A" /> },
+            { name: "Hotjar", icon: <HotjarIcon color="#DB1A1A" /> },
+            { name: "Mixpanel", icon: <MixpanelIcon color="#DB1A1A" /> },
           ],
         },
         {
@@ -1272,9 +1272,9 @@ export const services: Service[] = [
           title: "Social Media & Influencer Tools",
           icon: <FaBullhorn className="text-dark" />,
           technologies: [
-            { name: "Hootsuite", icon: <HootsuiteIcon color="#f84b07" /> },
-            { name: "Sprout Social", icon: <SproutSocialIcon color="#f84b07" /> },
-            { name: "Upfluence", icon: <UpfluenceIcon color="#f84b07" /> },
+            { name: "Hootsuite", icon: <HootsuiteIcon color="#DB1A1A" /> },
+            { name: "Sprout Social", icon: <SproutSocialIcon color="#DB1A1A" /> },
+            { name: "Upfluence", icon: <UpfluenceIcon color="#DB1A1A" /> },
           ],
         },
         {
@@ -1282,9 +1282,9 @@ export const services: Service[] = [
           title: "Payment & E-commerce Integration",
           icon: <FaCreditCard className="text-dark" />,
           technologies: [
-            { name: "Stripe", icon: <StripeIcon color="#f84b07" /> },
-            { name: "PayPal", icon: <PayPalIcon color="#f84b07" /> },
-            { name: "Shopify", icon: <ShopifyIcon color="#f84b07" /> },
+            { name: "Stripe", icon: <StripeIcon color="#DB1A1A" /> },
+            { name: "PayPal", icon: <PayPalIcon color="#DB1A1A" /> },
+            { name: "Shopify", icon: <ShopifyIcon color="#DB1A1A" /> },
           ],
         },
         {
@@ -1292,9 +1292,9 @@ export const services: Service[] = [
           title: "Project Management & Collaboration",
           icon: <FaProjectDiagram className="text-dark" />,
           technologies: [
-            { name: "Asana", icon: <NotionIcon color="#f84b07" /> },
-            { name: "Trello", icon: <ClickFunnelsIcon color="#f84b07" /> },
-            { name: "Monday.com", icon: <WebflowIcon color="#f84b07" /> },
+            { name: "Asana", icon: <NotionIcon color="#DB1A1A" /> },
+            { name: "Trello", icon: <ClickFunnelsIcon color="#DB1A1A" /> },
+            { name: "Monday.com", icon: <WebflowIcon color="#DB1A1A" /> },
           ],
         },
       ],
@@ -1477,10 +1477,10 @@ export const services: Service[] = [
           title: "Design & Prototyping",
           icon: <FaDraftingCompass className="text-dark" />,
           technologies: [
-            { name: "Figma", icon: <FigmaIcon color="#f84b07" /> },
-            { name: "Adobe Illustrator", icon: <AdobeIllustratorIcon color="#f84b07" /> },
-            { name: "Photoshop", icon: <AdobePhotoshopIcon color="#f84b07" /> },
-            { name: "Zeplin", icon: <ZeplinIcon color="#f84b07" /> },
+            { name: "Figma", icon: <FigmaIcon color="#DB1A1A" /> },
+            { name: "Adobe Illustrator", icon: <AdobeIllustratorIcon color="#DB1A1A" /> },
+            { name: "Photoshop", icon: <AdobePhotoshopIcon color="#DB1A1A" /> },
+            { name: "Zeplin", icon: <ZeplinIcon color="#DB1A1A" /> },
           ],
         },
         {
@@ -1488,9 +1488,9 @@ export const services: Service[] = [
           title: "Design Systems & Handoff",
           icon: <FaCode className="text-dark" />,
           technologies: [
-            { name: "Storybook", icon: <StorybookIcon color="#f84b07" /> },
-            { name: "LottieFiles", icon: <LottieFilesIcon color="#f84b07" /> },
-            { name: "Sketch", icon: <SketchIcon color="#f84b07" /> },
+            { name: "Storybook", icon: <StorybookIcon color="#DB1A1A" /> },
+            { name: "LottieFiles", icon: <LottieFilesIcon color="#DB1A1A" /> },
+            { name: "Sketch", icon: <SketchIcon color="#DB1A1A" /> },
           ],
         },
         {
@@ -1498,9 +1498,9 @@ export const services: Service[] = [
           title: "Web & Content Styling",
           icon: <FaGlobe className="text-dark" />,
           technologies: [
-            { name: "Canva", icon: <CanvaIcon color="#f84b07" /> },
-            { name: "Crello", icon: <CrelloIcon color="#f84b07" /> },
-            { name: "Webflow", icon: <WebflowIcon color="#f84b07" /> },
+            { name: "Canva", icon: <CanvaIcon color="#DB1A1A" /> },
+            { name: "Crello", icon: <CrelloIcon color="#DB1A1A" /> },
+            { name: "Webflow", icon: <WebflowIcon color="#DB1A1A" /> },
           ],
         },
         {
@@ -1508,9 +1508,9 @@ export const services: Service[] = [
           title: "Typography & Font Management",
           icon: <FaFont className="text-dark" />,
           technologies: [
-            { name: "Google Fonts", icon: <GoogleAnalyticsIcon color="#f84b07" /> },
-            { name: "Adobe Fonts", icon: <AdobeIllustratorIcon color="#f84b07" /> },
-            { name: "Font Awesome", icon: <FigmaIcon color="#f84b07" /> },
+            { name: "Google Fonts", icon: <GoogleAnalyticsIcon color="#DB1A1A" /> },
+            { name: "Adobe Fonts", icon: <AdobeIllustratorIcon color="#DB1A1A" /> },
+            { name: "Font Awesome", icon: <FigmaIcon color="#DB1A1A" /> },
           ],
         },
         {
@@ -1518,9 +1518,9 @@ export const services: Service[] = [
           title: "Color & Palette Tools",
           icon: <FaPalette className="text-dark" />,
           technologies: [
-            { name: "Coolors", icon: <CanvaIcon color="#f84b07" /> },
-            { name: "Adobe Color", icon: <AdobePhotoshopIcon color="#f84b07" /> },
-            { name: "Paletton", icon: <ZeplinIcon color="#f84b07" /> },
+            { name: "Coolors", icon: <CanvaIcon color="#DB1A1A" /> },
+            { name: "Adobe Color", icon: <AdobePhotoshopIcon color="#DB1A1A" /> },
+            { name: "Paletton", icon: <ZeplinIcon color="#DB1A1A" /> },
           ],
         },
         {
@@ -1528,9 +1528,9 @@ export const services: Service[] = [
           title: "Asset Management & Storage",
           icon: <FaCloud className="text-dark" />,
           technologies: [
-            { name: "Dropbox", icon: <WebflowIcon color="#f84b07" /> },
-            { name: "Google Drive", icon: <GoogleAnalyticsIcon color="#f84b07" /> },
-            { name: "Brandfolder", icon: <NotionIcon color="#f84b07" /> },
+            { name: "Dropbox", icon: <WebflowIcon color="#DB1A1A" /> },
+            { name: "Google Drive", icon: <GoogleAnalyticsIcon color="#DB1A1A" /> },
+            { name: "Brandfolder", icon: <NotionIcon color="#DB1A1A" /> },
           ],
         },
       ],
@@ -1736,11 +1736,11 @@ export const services: Service[] = [
           title: "Language & NLP Ecosystems",
           icon: <BackendIcon />,
           technologies: [
-            { name: "OpenAI GPT & Chat Completions", icon: <OpenAIIcon color={"#f84b07"} /> },
-            { name: "OpenAI Assistant API", icon: <OpenAIIcon color={"#f84b07"} /> },
-            { name: "Anthropic Claude", icon: <HuggingFaceIcon color={"#f84b07"} /> },
-            { name: "Cohere", icon: <CohereIcon color={"#f84b07"} /> },
-            { name: "Vapi Voice AI", icon: <DockerIcon color={"#f84b07"} /> }
+            { name: "OpenAI GPT & Chat Completions", icon: <OpenAIIcon color={"#DB1A1A"} /> },
+            { name: "OpenAI Assistant API", icon: <OpenAIIcon color={"#DB1A1A"} /> },
+            { name: "Anthropic Claude", icon: <HuggingFaceIcon color={"#DB1A1A"} /> },
+            { name: "Cohere", icon: <CohereIcon color={"#DB1A1A"} /> },
+            { name: "Vapi Voice AI", icon: <DockerIcon color={"#DB1A1A"} /> }
           ]
         },
         {
@@ -1748,11 +1748,11 @@ export const services: Service[] = [
           title: "Vision, Audio & Creative AI",
           icon: <FrontendIcon />,
           technologies: [
-            { name: "Midjourney", icon: <TensorFlowIcon color={"#f84b07"} /> },
-            { name: "Stable Diffusion", icon: <DockerIcon color={"#f84b07"} /> },
-            { name: "Runway ML", icon: <MLflowIcon color={"#f84b07"} /> },
-            { name: "ElevenLabs", icon: <MLflowIcon color={"#f84b07"} /> },
-            { name: "Whisper Speech-to-Text", icon: <PyTorchIcon color={"#f84b07"} /> }
+            { name: "Midjourney", icon: <TensorFlowIcon color={"#DB1A1A"} /> },
+            { name: "Stable Diffusion", icon: <DockerIcon color={"#DB1A1A"} /> },
+            { name: "Runway ML", icon: <MLflowIcon color={"#DB1A1A"} /> },
+            { name: "ElevenLabs", icon: <MLflowIcon color={"#DB1A1A"} /> },
+            { name: "Whisper Speech-to-Text", icon: <PyTorchIcon color={"#DB1A1A"} /> }
           ]
         },
         {
@@ -1760,9 +1760,9 @@ export const services: Service[] = [
           title: "AI-Powered Development Tools",
           icon: <MobileIcon />,
           technologies: [
-            { name: "GPT for Developers", icon: <OpenAIIcon color={"#f84b07"} /> },
-            { name: "Windsurf IDE", icon: <DockerIcon color={"#f84b07"} /> },
-            { name: "Cursor AI", icon: <MLflowIcon color={"#f84b07"} /> }
+            { name: "GPT for Developers", icon: <OpenAIIcon color={"#DB1A1A"} /> },
+            { name: "Windsurf IDE", icon: <DockerIcon color={"#DB1A1A"} /> },
+            { name: "Cursor AI", icon: <MLflowIcon color={"#DB1A1A"} /> }
           ]
         },
         {
@@ -1770,10 +1770,10 @@ export const services: Service[] = [
           title: "AI Operations & Agent Frameworks",
           icon: <MobileIcon />,
           technologies: [
-            { name: "LangChain", icon: <DockerIcon color={"#f84b07"} /> },
-            { name: "LlamaIndex", icon: <MLflowIcon color={"#f84b07"} /> },
-            { name: "AWS Bedrock", icon: <AWSSageMakerIcon color={"#f84b07"} /> },
-            { name: "Google Vertex AI", icon: <GCPVertexAIIcon color={"#f84b07"} /> }
+            { name: "LangChain", icon: <DockerIcon color={"#DB1A1A"} /> },
+            { name: "LlamaIndex", icon: <MLflowIcon color={"#DB1A1A"} /> },
+            { name: "AWS Bedrock", icon: <AWSSageMakerIcon color={"#DB1A1A"} /> },
+            { name: "Google Vertex AI", icon: <GCPVertexAIIcon color={"#DB1A1A"} /> }
           ]
         },
         {
@@ -1781,10 +1781,10 @@ export const services: Service[] = [
           title: "Model Training & Fine-Tuning",
           icon: <BackendIcon />,
           technologies: [
-            { name: "TensorFlow", icon: <TensorFlowIcon color={"#f84b07"} /> },
-            { name: "PyTorch", icon: <PyTorchIcon color={"#f84b07"} /> },
-            { name: "Hugging Face Transformers", icon: <HuggingFaceIcon color={"#f84b07"} /> },
-            { name: "Scikit-learn", icon: <ScikitLearnIcon color={"#f84b07"} /> }
+            { name: "TensorFlow", icon: <TensorFlowIcon color={"#DB1A1A"} /> },
+            { name: "PyTorch", icon: <PyTorchIcon color={"#DB1A1A"} /> },
+            { name: "Hugging Face Transformers", icon: <HuggingFaceIcon color={"#DB1A1A"} /> },
+            { name: "Scikit-learn", icon: <ScikitLearnIcon color={"#DB1A1A"} /> }
           ]
         },
         {
@@ -1792,10 +1792,10 @@ export const services: Service[] = [
           title: "AI Infrastructure & Deployment",
           icon: <FrontendIcon />,
           technologies: [
-            { name: "Docker", icon: <DockerIcon color={"#f84b07"} /> },
-            { name: "Kubernetes", icon: <DockerIcon color={"#f84b07"} /> },
-            { name: "MLflow", icon: <MLflowIcon color={"#f84b07"} /> },
-            { name: "Weights & Biases", icon: <MLflowIcon color={"#f84b07"} /> }
+            { name: "Docker", icon: <DockerIcon color={"#DB1A1A"} /> },
+            { name: "Kubernetes", icon: <DockerIcon color={"#DB1A1A"} /> },
+            { name: "MLflow", icon: <MLflowIcon color={"#DB1A1A"} /> },
+            { name: "Weights & Biases", icon: <MLflowIcon color={"#DB1A1A"} /> }
           ]
         }
       ]
@@ -2028,12 +2028,12 @@ export const services: Service[] = [
             title: "Frontend Frameworks",
             icon: <FrontendIcon />,
             technologies: [
-              { name: "HTML", icon: <HTMLIcon color={"#f84b07"} /> },
-              { name: "CSS", icon: <CSSIcon color={"#f84b07"} /> },
-              { name: "JavaScript", icon: <JSIcon color={"#f84b07"} /> },
-              { name: "React", icon: <ReactIcon color={"#f84b07"} /> },
-              { name: "Vue.js", icon: <VueIcon color={"#f84b07"} /> },
-              { name: "Next.js", icon: <NextjsIcon color={"#f84b07"} /> },
+              { name: "HTML", icon: <HTMLIcon color={"#DB1A1A"} /> },
+              { name: "CSS", icon: <CSSIcon color={"#DB1A1A"} /> },
+              { name: "JavaScript", icon: <JSIcon color={"#DB1A1A"} /> },
+              { name: "React", icon: <ReactIcon color={"#DB1A1A"} /> },
+              { name: "Vue.js", icon: <VueIcon color={"#DB1A1A"} /> },
+              { name: "Next.js", icon: <NextjsIcon color={"#DB1A1A"} /> },
             ],
           },
           {
@@ -2041,10 +2041,10 @@ export const services: Service[] = [
             title: "Backend Technologies",
             icon: <BackendIcon />,
             technologies: [
-              { name: "Node.js", icon: <NodejsIcon color={"#f84b07"} /> },
-              { name: "Python", icon: <PythonIcon color={"#f84b07"} /> },
-              { name: "Django", icon: <PythonIcon color={"#f84b07"} /> },
-              { name: "FastAPI", icon: <PythonIcon color={"#f84b07"} /> },
+              { name: "Node.js", icon: <NodejsIcon color={"#DB1A1A"} /> },
+              { name: "Python", icon: <PythonIcon color={"#DB1A1A"} /> },
+              { name: "Django", icon: <PythonIcon color={"#DB1A1A"} /> },
+              { name: "FastAPI", icon: <PythonIcon color={"#DB1A1A"} /> },
             ],
           },
           {
@@ -2052,12 +2052,12 @@ export const services: Service[] = [
             title: "Databases & CMS Platforms",
             icon: <MobileIcon />,
             technologies: [
-              { name: "WordPress", icon: <AndroidIcon color={"#f84b07"} /> },
-              { name: "Sanity", icon: <FlutterIcon color={"#f84b07"} /> },
-              { name: "Strapi", icon: <PWAIcon color={"#f84b07"} /> },
-              { name: "MySQL", icon: <MySQLIcon color={"#f84b07"} /> },
-              { name: "PostgreSQL", icon: <PostgreSQLIcon color={"#f84b07"} /> },
-              { name: "MongoDB", icon: <MongoDBIcon color={"#f84b07"} /> },
+              { name: "WordPress", icon: <AndroidIcon color={"#DB1A1A"} /> },
+              { name: "Sanity", icon: <FlutterIcon color={"#DB1A1A"} /> },
+              { name: "Strapi", icon: <PWAIcon color={"#DB1A1A"} /> },
+              { name: "MySQL", icon: <MySQLIcon color={"#DB1A1A"} /> },
+              { name: "PostgreSQL", icon: <PostgreSQLIcon color={"#DB1A1A"} /> },
+              { name: "MongoDB", icon: <MongoDBIcon color={"#DB1A1A"} /> },
             ],
           },
           {
@@ -2065,10 +2065,10 @@ export const services: Service[] = [
             title: "Cloud Hosting & Deployment",
             icon: <BackendIcon />,
             technologies: [
-              { name: "Vercel", icon: <VercelIcon color={"#f84b07"} /> },
-              { name: "Netlify", icon: <HerokuIcon color={"#f84b07"} /> },
-              { name: "AWS", icon: <DockerIcon color={"#f84b07"} /> },
-              { name: "Google Cloud", icon: <DockerIcon color={"#f84b07"} /> },
+              { name: "Vercel", icon: <VercelIcon color={"#DB1A1A"} /> },
+              { name: "Netlify", icon: <HerokuIcon color={"#DB1A1A"} /> },
+              { name: "AWS", icon: <DockerIcon color={"#DB1A1A"} /> },
+              { name: "Google Cloud", icon: <DockerIcon color={"#DB1A1A"} /> },
             ],
           },
           {
@@ -2076,10 +2076,10 @@ export const services: Service[] = [
             title: "API & Integration Tools",
             icon: <BackendIcon />,
             technologies: [
-              { name: "REST APIs", icon: <NodejsIcon color={"#f84b07"} /> },
-              { name: "GraphQL", icon: <PostgreSQLIcon color={"#f84b07"} /> },
-              { name: "Webhooks", icon: <ExpressIcon color={"#f84b07"} /> },
-              { name: "Zapier", icon: <ZapierIcon color={"#f84b07"} /> },
+              { name: "REST APIs", icon: <NodejsIcon color={"#DB1A1A"} /> },
+              { name: "GraphQL", icon: <PostgreSQLIcon color={"#DB1A1A"} /> },
+              { name: "Webhooks", icon: <ExpressIcon color={"#DB1A1A"} /> },
+              { name: "Zapier", icon: <ZapierIcon color={"#DB1A1A"} /> },
             ],
           },
           {
@@ -2087,10 +2087,10 @@ export const services: Service[] = [
             title: "Security & Performance Tools",
             icon: <MobileIcon />,
             technologies: [
-              { name: "Cloudflare", icon: <DockerIcon color={"#f84b07"} /> },
-              { name: "Auth0", icon: <FirebaseIcon color={"#f84b07"} /> },
-              { name: "Sentry", icon: <JestIcon color={"#f84b07"} /> },
-              { name: "Lighthouse", icon: <GoogleAnalyticsIcon color={"#f84b07"} /> },
+              { name: "Cloudflare", icon: <DockerIcon color={"#DB1A1A"} /> },
+              { name: "Auth0", icon: <FirebaseIcon color={"#DB1A1A"} /> },
+              { name: "Sentry", icon: <JestIcon color={"#DB1A1A"} /> },
+              { name: "Lighthouse", icon: <GoogleAnalyticsIcon color={"#DB1A1A"} /> },
             ],
           },
         ],
@@ -2318,11 +2318,11 @@ export const services: Service[] = [
             title: "Frameworks & Languages",
             icon: <FrontendIcon />,
             technologies: [
-              { name: "Flutter", icon: <FlutterIcon color={"#f84b07"} /> },
-              { name: "React Native", icon: <ReactNativeIcon color={"#f84b07"} /> },
-              { name: "Swift", icon: <SwiftIcon color={"#f84b07"} /> },
-              { name: "Kotlin", icon: <KotlinIcon color={"#f84b07"} /> },
-              { name: "Java", icon: <JavaIcon color={"#f84b07"} /> },
+              { name: "Flutter", icon: <FlutterIcon color={"#DB1A1A"} /> },
+              { name: "React Native", icon: <ReactNativeIcon color={"#DB1A1A"} /> },
+              { name: "Swift", icon: <SwiftIcon color={"#DB1A1A"} /> },
+              { name: "Kotlin", icon: <KotlinIcon color={"#DB1A1A"} /> },
+              { name: "Java", icon: <JavaIcon color={"#DB1A1A"} /> },
             ],
           },
           {
@@ -2330,11 +2330,11 @@ export const services: Service[] = [
             title: "Backend & Database",
             icon: <BackendIcon />,
             technologies: [
-              { name: "Firebase", icon: <FirebaseIcon color={"#f84b07"} /> },
-              { name: "MongoDB", icon: <MongoDBIcon color={"#f84b07"} /> },
-              { name: "Django", icon: <PythonIcon color={"#f84b07"} /> },
-              { name: "Express.js", icon: <ExpressIcon color={"#f84b07"} /> },
-              { name: "GraphQL", icon: <PostgreSQLIcon color={"#f84b07"} /> },
+              { name: "Firebase", icon: <FirebaseIcon color={"#DB1A1A"} /> },
+              { name: "MongoDB", icon: <MongoDBIcon color={"#DB1A1A"} /> },
+              { name: "Django", icon: <PythonIcon color={"#DB1A1A"} /> },
+              { name: "Express.js", icon: <ExpressIcon color={"#DB1A1A"} /> },
+              { name: "GraphQL", icon: <PostgreSQLIcon color={"#DB1A1A"} /> },
             ],
           },
           {
@@ -2342,10 +2342,10 @@ export const services: Service[] = [
             title: "DevOps & Testing Tools",
             icon: <MobileIcon />,
             technologies: [
-              { name: "Bitrise", icon: <BitriseIcon color={"#f84b07"} /> },
-              { name: "Appium", icon: <AppiumIcon color={"#f84b07"} /> },
-              { name: "BrowserStack", icon: <BrowserStackIcon color={"#f84b07"} /> },
-              { name: "Jest", icon: <JestIcon color={"#f84b07"} /> },
+              { name: "Bitrise", icon: <BitriseIcon color={"#DB1A1A"} /> },
+              { name: "Appium", icon: <AppiumIcon color={"#DB1A1A"} /> },
+              { name: "BrowserStack", icon: <BrowserStackIcon color={"#DB1A1A"} /> },
+              { name: "Jest", icon: <JestIcon color={"#DB1A1A"} /> },
             ],
           },
           {
@@ -2353,10 +2353,10 @@ export const services: Service[] = [
             title: "Cloud Services & Backend",
             icon: <BackendIcon />,
             technologies: [
-              { name: "AWS Amplify", icon: <DockerIcon color={"#f84b07"} /> },
-              { name: "Google Firebase", icon: <FirebaseIcon color={"#f84b07"} /> },
-              { name: "Supabase", icon: <SupabaseIcon color={"#f84b07"} /> },
-              { name: "Heroku", icon: <HerokuIcon color={"#f84b07"} /> },
+              { name: "AWS Amplify", icon: <DockerIcon color={"#DB1A1A"} /> },
+              { name: "Google Firebase", icon: <FirebaseIcon color={"#DB1A1A"} /> },
+              { name: "Supabase", icon: <SupabaseIcon color={"#DB1A1A"} /> },
+              { name: "Heroku", icon: <HerokuIcon color={"#DB1A1A"} /> },
             ],
           },
           {
@@ -2364,10 +2364,10 @@ export const services: Service[] = [
             title: "Push Notifications & Analytics",
             icon: <MobileIcon />,
             technologies: [
-              { name: "OneSignal", icon: <FirebaseIcon color={"#f84b07"} /> },
-              { name: "Mixpanel", icon: <MixpanelIcon color={"#f84b07"} /> },
-              { name: "Amplitude", icon: <GoogleAnalyticsIcon color={"#f84b07"} /> },
-              { name: "Segment", icon: <PostgreSQLIcon color={"#f84b07"} /> },
+              { name: "OneSignal", icon: <FirebaseIcon color={"#DB1A1A"} /> },
+              { name: "Mixpanel", icon: <MixpanelIcon color={"#DB1A1A"} /> },
+              { name: "Amplitude", icon: <GoogleAnalyticsIcon color={"#DB1A1A"} /> },
+              { name: "Segment", icon: <PostgreSQLIcon color={"#DB1A1A"} /> },
             ],
           },
           {
@@ -2375,10 +2375,10 @@ export const services: Service[] = [
             title: "App Store & Distribution",
             icon: <FrontendIcon />,
             technologies: [
-              { name: "App Store Connect", icon: <SwiftIcon color={"#f84b07"} /> },
-              { name: "Google Play Console", icon: <AndroidIcon color={"#f84b07"} /> },
-              { name: "TestFlight", icon: <SwiftIcon color={"#f84b07"} /> },
-              { name: "CodePush", icon: <ReactNativeIcon color={"#f84b07"} /> },
+              { name: "App Store Connect", icon: <SwiftIcon color={"#DB1A1A"} /> },
+              { name: "Google Play Console", icon: <AndroidIcon color={"#DB1A1A"} /> },
+              { name: "TestFlight", icon: <SwiftIcon color={"#DB1A1A"} /> },
+              { name: "CodePush", icon: <ReactNativeIcon color={"#DB1A1A"} /> },
             ],
           },
         ],
@@ -2825,10 +2825,10 @@ export const services: Service[] = [
             title: "Frontend Frameworks",
             icon: <FrontendIcon />,
             technologies: [
-              { name: "React", icon: <ReactIcon color={'#f84b07'} /> },
-              { name: "Next.js", icon: <NextjsIcon color={'#f84b07'} /> },
-              { name: "Vue.js", icon: <VueIcon color={'#f84b07'} /> },
-              { name: "Flutter", icon: <FlutterIcon color={'#f84b07'} /> },
+              { name: "React", icon: <ReactIcon color={'#DB1A1A'} /> },
+              { name: "Next.js", icon: <NextjsIcon color={'#DB1A1A'} /> },
+              { name: "Vue.js", icon: <VueIcon color={'#DB1A1A'} /> },
+              { name: "Flutter", icon: <FlutterIcon color={'#DB1A1A'} /> },
             ],
           },
           {
@@ -2836,10 +2836,10 @@ export const services: Service[] = [
             title: "Backend & Databases",
             icon: <BackendIcon />,
             technologies: [
-              { name: "Firebase", icon: <FirebaseIcon color={'#f84b07'} /> },
-              { name: "Supabase", icon: <SupabaseIcon color={'#f84b07'} /> },
-              { name: "Express.js", icon: <ExpressIcon color={'#f84b07'} /> },
-              { name: "Django", icon: <PythonIcon color={'#f84b07'} /> },
+              { name: "Firebase", icon: <FirebaseIcon color={'#DB1A1A'} /> },
+              { name: "Supabase", icon: <SupabaseIcon color={'#DB1A1A'} /> },
+              { name: "Express.js", icon: <ExpressIcon color={'#DB1A1A'} /> },
+              { name: "Django", icon: <PythonIcon color={'#DB1A1A'} /> },
             ],
           },
           {
@@ -2847,10 +2847,10 @@ export const services: Service[] = [
             title: "DevOps & Integrations",
             icon: <MobileIcon />,
             technologies: [
-              { name: "Stripe", icon: <StripeIcon color={'#f84b07'} /> },
-              { name: "Vercel", icon: <VercelIcon color={'#f84b07'} /> },
-              { name: "AWS", icon: <AWSSageMakerIcon color={'#f84b07'} /> },
-              { name: "Heroku", icon: <HerokuIcon color={'#f84b07'} /> },
+              { name: "Stripe", icon: <StripeIcon color={'#DB1A1A'} /> },
+              { name: "Vercel", icon: <VercelIcon color={'#DB1A1A'} /> },
+              { name: "AWS", icon: <AWSSageMakerIcon color={'#DB1A1A'} /> },
+              { name: "Heroku", icon: <HerokuIcon color={'#DB1A1A'} /> },
             ],
           },
           {
@@ -2858,10 +2858,10 @@ export const services: Service[] = [
             title: "Authentication & Security",
             icon: <BackendIcon />,
             technologies: [
-              { name: "Auth0", icon: <FirebaseIcon color={'#f84b07'} /> },
-              { name: "Firebase Auth", icon: <FirebaseIcon color={'#f84b07'} /> },
-              { name: "Supabase Auth", icon: <SupabaseIcon color={'#f84b07'} /> },
-              { name: "NextAuth", icon: <NextjsIcon color={'#f84b07'} /> },
+              { name: "Auth0", icon: <FirebaseIcon color={'#DB1A1A'} /> },
+              { name: "Firebase Auth", icon: <FirebaseIcon color={'#DB1A1A'} /> },
+              { name: "Supabase Auth", icon: <SupabaseIcon color={'#DB1A1A'} /> },
+              { name: "NextAuth", icon: <NextjsIcon color={'#DB1A1A'} /> },
             ],
           },
           {
@@ -2869,10 +2869,10 @@ export const services: Service[] = [
             title: "Monitoring & Error Tracking",
             icon: <MobileIcon />,
             technologies: [
-              { name: "Sentry", icon: <JestIcon color={'#f84b07'} /> },
-              { name: "LogRocket", icon: <GoogleAnalyticsIcon color={'#f84b07'} /> },
-              { name: "Datadog", icon: <MixpanelIcon color={'#f84b07'} /> },
-              { name: "New Relic", icon: <ExpressIcon color={'#f84b07'} /> },
+              { name: "Sentry", icon: <JestIcon color={'#DB1A1A'} /> },
+              { name: "LogRocket", icon: <GoogleAnalyticsIcon color={'#DB1A1A'} /> },
+              { name: "Datadog", icon: <MixpanelIcon color={'#DB1A1A'} /> },
+              { name: "New Relic", icon: <ExpressIcon color={'#DB1A1A'} /> },
             ],
           },
           {
@@ -2880,10 +2880,10 @@ export const services: Service[] = [
             title: "Design & Prototyping Tools",
             icon: <FrontendIcon />,
             technologies: [
-              { name: "Figma", icon: <FigmaIcon color={'#f84b07'} /> },
-              { name: "Adobe XD", icon: <AdobeIllustratorIcon color={'#f84b07'} /> },
-              { name: "Sketch", icon: <SketchIcon color={'#f84b07'} /> },
-              { name: "InVision", icon: <ZeplinIcon color={'#f84b07'} /> },
+              { name: "Figma", icon: <FigmaIcon color={'#DB1A1A'} /> },
+              { name: "Adobe XD", icon: <AdobeIllustratorIcon color={'#DB1A1A'} /> },
+              { name: "Sketch", icon: <SketchIcon color={'#DB1A1A'} /> },
+              { name: "InVision", icon: <ZeplinIcon color={'#DB1A1A'} /> },
             ],
           },
         ],
@@ -3118,10 +3118,10 @@ export const services: Service[] = [
             title: "Ecommerce Platforms",
             icon: <FrontendIcon />,
             technologies: [
-              { name: "Shopify", icon: <ShopifyIcon color={'#f84b07'} /> },
-              { name: "WooCommerce", icon: <WooCommerceIcon color={'#f84b07'} /> },
-              { name: "Magento", icon: <MagentoIcon color={'#f84b07'} /> },
-              { name: "BigCommerce", icon: <BigCommerceIcon color={'#f84b07'} /> },
+              { name: "Shopify", icon: <ShopifyIcon color={'#DB1A1A'} /> },
+              { name: "WooCommerce", icon: <WooCommerceIcon color={'#DB1A1A'} /> },
+              { name: "Magento", icon: <MagentoIcon color={'#DB1A1A'} /> },
+              { name: "BigCommerce", icon: <BigCommerceIcon color={'#DB1A1A'} /> },
             ],
           },
           {
@@ -3129,9 +3129,9 @@ export const services: Service[] = [
             title: "Frontend & Backend Frameworks",
             icon: <BackendIcon />,
             technologies: [
-              { name: "Next.js", icon: <NextjsIcon color={'#f84b07'} /> },
-              { name: "Vue.js", icon: <VueIcon color={'#f84b07'} /> },
-              { name: "Node.js", icon: <NodejsIcon color={'#f84b07'} /> },
+              { name: "Next.js", icon: <NextjsIcon color={'#DB1A1A'} /> },
+              { name: "Vue.js", icon: <VueIcon color={'#DB1A1A'} /> },
+              { name: "Node.js", icon: <NodejsIcon color={'#DB1A1A'} /> },
             ],
           },
           {
@@ -3139,9 +3139,9 @@ export const services: Service[] = [
             title: "Integrations & Analytics Tools",
             icon: <MobileIcon />,
             technologies: [
-              { name: "PayPal", icon: <PayPalIcon color={'#f84b07'} /> },
-              { name: "Google Analytics", icon: <GoogleAnalyticsIcon color={'#f84b07'} /> },
-              { name: "Klaviyo", icon: <KlaviyoIcon color={'#f84b07'} /> },
+              { name: "PayPal", icon: <PayPalIcon color={'#DB1A1A'} /> },
+              { name: "Google Analytics", icon: <GoogleAnalyticsIcon color={'#DB1A1A'} /> },
+              { name: "Klaviyo", icon: <KlaviyoIcon color={'#DB1A1A'} /> },
             ],
           },
           {
@@ -3149,10 +3149,10 @@ export const services: Service[] = [
             title: "Payment Gateways",
             icon: <BackendIcon />,
             technologies: [
-              { name: "Stripe", icon: <StripeIcon color={'#f84b07'} /> },
-              { name: "Square", icon: <PayPalIcon color={'#f84b07'} /> },
-              { name: "Authorize.Net", icon: <PayPalIcon color={'#f84b07'} /> },
-              { name: "Braintree", icon: <PayPalIcon color={'#f84b07'} /> },
+              { name: "Stripe", icon: <StripeIcon color={'#DB1A1A'} /> },
+              { name: "Square", icon: <PayPalIcon color={'#DB1A1A'} /> },
+              { name: "Authorize.Net", icon: <PayPalIcon color={'#DB1A1A'} /> },
+              { name: "Braintree", icon: <PayPalIcon color={'#DB1A1A'} /> },
             ],
           },
           {
@@ -3160,9 +3160,9 @@ export const services: Service[] = [
             title: "Inventory & Order Management",
             icon: <MobileIcon />,
             technologies: [
-              { name: "TradeGecko", icon: <ShopifyIcon color={'#f84b07'} /> },
-              { name: "ShipStation", icon: <ShopifyIcon color={'#f84b07'} /> },
-              { name: "Orderhive", icon: <ShopifyIcon color={'#f84b07'} /> },
+              { name: "TradeGecko", icon: <ShopifyIcon color={'#DB1A1A'} /> },
+              { name: "ShipStation", icon: <ShopifyIcon color={'#DB1A1A'} /> },
+              { name: "Orderhive", icon: <ShopifyIcon color={'#DB1A1A'} /> },
             ],
           },
           {
@@ -3170,10 +3170,10 @@ export const services: Service[] = [
             title: "Marketing & Email Automation",
             icon: <FrontendIcon />,
             technologies: [
-              { name: "Mailchimp", icon: <MailchimpIcon color={'#f84b07'} /> },
-              { name: "Omnisend", icon: <KlaviyoIcon color={'#f84b07'} /> },
-              { name: "ConvertKit", icon: <ActiveIcon color={'#f84b07'} /> },
-              { name: "SendGrid", icon: <ZapierIcon color={'#f84b07'} /> },
+              { name: "Mailchimp", icon: <MailchimpIcon color={'#DB1A1A'} /> },
+              { name: "Omnisend", icon: <KlaviyoIcon color={'#DB1A1A'} /> },
+              { name: "ConvertKit", icon: <ActiveIcon color={'#DB1A1A'} /> },
+              { name: "SendGrid", icon: <ZapierIcon color={'#DB1A1A'} /> },
             ],
           },
         ],

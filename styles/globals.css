@@ -48,10 +48,10 @@ body {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: conic-gradient(#f84b07 0deg 300deg, transparent 300deg 360deg);
+  background: conic-gradient(#DB1A1A 0deg 300deg, transparent 300deg 360deg);
   animation: spin 1.5s linear infinite;
   position: relative;
-  box-shadow: 0 0 10px rgba(248, 75, 7, 0.4);
+  box-shadow: 0 0 10px rgba(219, 26, 26, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,9 +60,9 @@ body {
 .pi-symbol {
   font-size: 24px;
   font-weight: bold;
-  color: #f84b07;
+  color: #DB1A1A;
   animation: pulse 1.6s ease-in-out infinite;
-  text-shadow: 0 0 6px rgba(248, 75, 7, 0.5);
+  text-shadow: 0 0 6px rgba(219, 26, 26, 0.5);
   position: absolute;
   z-index: 2;
 }
@@ -136,7 +136,7 @@ body {
 .loader {
   width: 40px;
   aspect-ratio: 1;
-  color: #f84b07;
+  color: #DB1A1A;
   position: relative;
   background: radial-gradient(10px, currentColor 94%, #0000);
 }

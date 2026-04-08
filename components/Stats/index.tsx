@@ -12,7 +12,7 @@ export default function Stats() {
       </div>
 
       <div className="relative container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {stats.map((stat, index) => (
             <StatCard key={stat.label} stat={stat} index={index} />
           ))}
@@ -37,7 +37,7 @@ function StatCard({ stat, index }: { stat: { label: string; icon: React.ReactNod
       onMouseLeave={() => setIsHovered(false)}
       className="group relative"
     >
-      <div className="relative h-full p-8 rounded-2xl bg-black/60 border border-white/10 backdrop-blur-xl overflow-hidden transition-all duration-500 hover:border-white/20 hover:bg-black/80">
+      <div className="relative h-full p-5 md:p-6 rounded-xl bg-black/60 border border-white/10 backdrop-blur-xl overflow-hidden transition-all duration-500 hover:border-white/20 hover:bg-black/80">
         <motion.div
           className="absolute inset-0 opacity-0 group-hover:opacity-100"
           initial={{ opacity: 0 }}
@@ -49,7 +49,7 @@ function StatCard({ stat, index }: { stat: { label: string; icon: React.ReactNod
         />
 
         <motion.div
-          className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100"
+          className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100"
           animate={{
             boxShadow: isHovered 
               ? "0 0 30px rgba(250, 158, 137, 0.2)"
@@ -67,7 +67,7 @@ function StatCard({ stat, index }: { stat: { label: string; icon: React.ReactNod
 
         <div className="relative z-10 flex flex-col h-full">
           <motion.div
-            className="mb-6"
+            className="mb-4"
             animate={{
               scale: isHovered ? [1, 1.1, 1] : 1,
             }}
@@ -77,7 +77,7 @@ function StatCard({ stat, index }: { stat: { label: string; icon: React.ReactNod
             }}
           >
             <motion.div
-              className="relative w-14 h-14 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center backdrop-blur-sm"
+              className="relative w-11 h-11 md:w-12 md:h-12 rounded-lg bg-white/10 border border-white/20 flex items-center justify-center backdrop-blur-sm"
               animate={{
                 backgroundColor: isHovered 
                   ? "rgba(250, 158, 137, 0.2)" 
@@ -97,9 +97,9 @@ function StatCard({ stat, index }: { stat: { label: string; icon: React.ReactNod
             </motion.div>
           </motion.div>
 
-          <div className="flex-grow space-y-3">
+          <div className="flex-grow space-y-2">
             <motion.h3
-              className="text-xl md:text-2xl font-bold text-light"
+              className="text-lg md:text-xl font-bold text-light leading-snug"
               animate={{
                 color: isHovered ? "rgb(250, 158, 137)" : "rgb(255, 255, 255)",
               }}
@@ -108,7 +108,7 @@ function StatCard({ stat, index }: { stat: { label: string; icon: React.ReactNod
               {stat.label}
             </motion.h3>
             <motion.p
-              className="text-base md:text-lg text-white/70 leading-relaxed"
+              className="text-sm md:text-base text-white/70 leading-snug"
               animate={{
                 color: isHovered ? "rgba(255, 255, 255, 0.9)" : "rgba(255, 255, 255, 0.7)",
               }}
@@ -118,7 +118,7 @@ function StatCard({ stat, index }: { stat: { label: string; icon: React.ReactNod
             </motion.p>
           </div>
 
-          <div className="absolute top-4 right-4 w-2 h-2 rounded-full bg-secondary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="absolute top-3 right-3 w-1.5 h-1.5 rounded-full bg-secondary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </div>
       </div>
     </motion.div>
