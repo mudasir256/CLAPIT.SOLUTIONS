@@ -28,9 +28,13 @@ import {
 } from "lucide-react";
 
 
-export const caseStudies: (CaseStudy & { featured?: boolean })[] = [
+export const allCaseStudies: (CaseStudy & {
+  featured?: boolean;
+  hidden?: boolean;
+})[] = [
   {
     id: "whosedm",
+    hidden: true,
     industries: ["Marketing", "Social Media Automation"],
     services: [
       "Custom Product Development",
@@ -1241,3 +1245,5 @@ export const caseStudies: (CaseStudy & { featured?: boolean })[] = [
   }
   
 ];
+
+export const caseStudies = allCaseStudies.filter((study) => !study.hidden);
